@@ -57,8 +57,6 @@
    &trans   &trans  &kp CLCK    &kp END   &kp PG_DN  &kp SLCK    &kp K_CUT &kp K_COPY  &kp K_PASTE  &trans    &trans  &trans
                                 &trans    &trans     &trans      &trans    &trans      &trans
                         >;
-
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
 
                 raise_layer {
@@ -73,28 +71,24 @@
    &trans   &trans    &kp SQT   &kp DQT  &kp SEMI &kp LT      &kp GT    &kp COLON &kp PIPE  &kp UNDER &kp EQUAL &trans
                                 &trans   &trans   &trans      &trans    &trans    &trans
                         >;
-
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
 
                 tri_layer {
 // ------------------------------------------------------------------------------------------------
 // | F1  | F2   | F3   | F4  | F5  | F6  |    | F7   | F8   |  F9  | F10 | F11 |  F12 |
-// |BTCLR| BT1  | BT2  | BT3 | BT4 | BT5 |    | PREV | PLAY | NEXT | BR- | BR+ |      |
+// |BTCLR| BT1  | BT2  | BT3 | BT4 | BT5 |    | PREV | PLAY | NEXT | vol- | vol+ |      |
 // |     | OUSB | OBLE |     |     |     |    | GAME |      |      |     |     |      |
 //                     |     |     |     |    |      |      |      |
                         bindings = <
    &kp F1     &kp F2        &kp F3       &kp F4       &kp F5       &kp F6       &kp F7     &kp F8   &kp F9     &kp F10      &kp F11      &kp F12
-   &bt BT_CLR &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp K_PREV &kp K_PP &kp K_NEXT &kp C_BRI_DN &kp C_BRI_UP &trans
+   &bt BT_CLR &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp c_PREV &kp c_PLAY_PAUSE &kp c_NEXT &kp k_VOLUME_DOWN &kp k_VOLUME_UP &trans
    &trans     &out OUT_USB  &out OUT_BLE &trans       &trans       &trans       &tog GAME  &trans   &trans     &trans       &trans       &trans
-                                         &trans       &trans       &trans       &trans     &trans   &trans
+               &trans       &trans       &trans       &trans     &trans   &trans
                         >;
-
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
 
                 game_layer {
-// qwerty layer for gaming; exit by pressing ESC+BKSP
+// qwerty layer for gaming; exit by TAB + DELETE
 // ------------------------------------------------------------------------------------------------
 // |      |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |     |
 // |      |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |     |
