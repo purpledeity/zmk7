@@ -55,7 +55,7 @@
                  &kp TAB    &kp Q      &kp W      &kp D      &kp F      &kp K              &kp J      &kp U      &kp R      &kp L      &kp ;      &kp SQT
             // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
             // |  CTRL    |  A       |  S       |  E       |  T       |  G       |       |  Y       |  N       |  I       |  O       |  H       |  BSPC    |
-                 &kp LCTRL  &kp A      HRML(S,    E,         T)         &kp G              &kp Y      HRML(N,    I,         O)         &kp H      &kp BSPC
+                 &kp LCTRL &kp A &kp S &kp E &kp T &kp G   &kp Y &kp N  &kp I     &kp O   &kp H    &kp SQT
             // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
             // |  SHFT    |  Z       |  X       |  C       |  V       |  B       |       |  P       |  M       |  ,       |  .       |  /       |  ESC     |
                  &kp LSHIFT  &kp Z      &kp X      &kp C      &kp V      &kp B              &kp P      &kp M      &kp COMMA  &kp DOT    &kp FLSH   &kp ESC
