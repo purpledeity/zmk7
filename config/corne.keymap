@@ -5,7 +5,7 @@
 
 #define BASE 0
 
-{
+/ {
         behaviors {
                 ht: hold_tap {
                         label = "hold_tap";
