@@ -34,15 +34,16 @@
                          global-quick-tap;
                         bindings = <&kp>, <&kp>;
                 };
-
-                mt_impl: mod-tap-by-hold-tap {
-                        compatible = "zmk,behavior-hold-tap";
-                        label = "MOD_TAP_BY_HOLD_TAP";
-                        #binding-cells = <2>;
-                        tapping-term-ms = <200>;
-                        quick-tap-ms = <0>;
-                        flavor = "hold-preferred";
-                        bindings = <&kp>, <&kp>;
+        };
+        behaviors {
+                lt_impl: layer-tap-by-hold-tap {
+                compatible = "zmk,behavior-hold-tap";
+                label = "LAYER_TAP_BY_HOLD_TAP";
+                #binding-cells = <2>;
+                tapping-term-ms = <200>;
+                quick-tap-ms = <0>;
+                flavor = "tap-preferred";
+                bindings = <&mo>, <&kp>;
                 };
         };
 
@@ -146,7 +147,7 @@
                      &trans     &kp Z      &kp X      &kp C      &kp V      &kp B              &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |  GUI     |  LWR     |  SPC     |       |  ENT     |  RSE     |  ALT     |
-                                                      &trans   &LT(1, ESC)  &trans             &trans     &trans     &trans
+                                                      &trans     &kp ESC    &trans             &trans     &trans     &trans
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 }; 
