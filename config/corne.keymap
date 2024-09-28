@@ -147,7 +147,7 @@
                      &trans     &kp Z      &kp X      &kp C      &kp V      &kp B              &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |  GUI     |  LWR     |  SPC     |       |  ENT     |  RSE     |  ALT     |
-                                                      &trans     &kp ESC    &trans             &trans     &trans     &trans
+                                                      &trans     &LT(1, ESC)    &trans             &trans     &trans     &trans
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 }; 
