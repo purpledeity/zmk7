@@ -52,7 +52,7 @@
                          bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 // |  TAB     |  Q       |  W       |  D       |  F       |  K       |       |  J       |  U       |  R       |  L       |  ;       |  '       |
-                     &kp TAB    &kp Q      &kp W      &kp D      &kp F      &kp K              &kp J      &kp U      &kp R      &kp L      &kp SEMI   &kp BSPC
+                     &kp TAB    &kp Q      &kp W      &kp D      &kp F      &kp K              &kp J      &kp U      &kp R      &kp L      &kp SEMI   &kp SQT
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |  CTRL    |  A       |  S       |  E       |  T       |  G       |       |  Y       |  N       |  I       |  O       |  H       |  BSPC    |
                      &kp LCTRL  &kp A      HRML(S,    E,         T)         &kp G              &kp Y      HRML(N,    I,         O)         &kp H      &kp BSPC
