@@ -144,8 +144,8 @@
                 // |  SHFT    |  Z       |  X       |  C       |  V       |  B       |       |  P       |  M       |  ,       |  .       |  /       |          |
                      &trans     &kp Z      &kp X      &kp C      &kp V      &kp B              &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
-                //                                  |  GUI     | ESC L(1) |  SPC     |       |  ENT     |  RSE     |  ALT     |
-                                                      &trans    &lt(1, ESC) &trans             &trans     &trans     &trans
+                //                                  |  GUI     |  ESC     |  SPC     |       |  ENT     |  RSE     |  ALT     |
+                                                      &trans     &kp ESC    &trans             &trans     &trans     &trans
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 }; 
