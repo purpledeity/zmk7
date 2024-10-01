@@ -35,18 +35,6 @@
                 };
         };
         
-        behaviors {
-                lt_impl: layer-tap-by-hold-tap {
-                compatible = "zmk,behavior-hold-tap";
-                label = "LAYER_TAP_BY_HOLD_TAP";
-                #binding-cells = <2>;
-                tapping-term-ms = <200>;
-                quick-tap-ms = <0>;
-                flavor = "tap-preferred";
-                bindings = <&mo>, <&kp>;
-                };
-        };
-
         combos {
             compatible = "zmk,combos";
             combo_exit_game_layer {
@@ -142,23 +130,6 @@
                         >;
                 };
 
-        numb_layer {
-                        bindings = <
-                // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                // |          |          |          |          |          |          |       |  N lock  |  N1      |  N2      |  N3      |          |          |
-                      &trans     &trans     &trans     &trans     &trans     &trans            &kp NUM    &kp kp N1  &kp N2     &kp N3     &trans     &trans
-                // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |          |          |          |          |          |          |       |  Click   |  N4      |  N5      |  N6      |          |          |
-                      &trans     &trans     &trans     &trans     &trans     &trans            &mkp MB1   &kp N4     &kp N5     &kp N6     &trans     &trans
-                // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |          |          |          |          |          |          |       |  Middle  |  N7      |  N8      |  N9      |  N0      |          |
-                      &trans    &trans     &trans     &trans     &trans     &trans             &mkp MB3   &kp N7     &kp N8     &kp N9     &kp N0     &trans
-                // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
-                //                                  |          |          |          |       |          |          |          |
-                                                      &trans     &trans     &trans             &trans     &trans     &trans
-                //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
-                        >;
-                }; 
 
                 
         game_layer {
