@@ -35,9 +35,14 @@
                 };
         };
 
-
         combos {
-                compatible = "zmk,combos";
+            compatible = "zmk,combos";
+                combo_exit_game_layer {
+                         timeout-ms = <50>;
+                        layers = <GAME>; // only on game layer
+                        key-positions = <0 11>; // top left and top right keys
+                        bindings = <&tog GAME>; // toggle game layer off
+                };
                 combo_NUMB {
                         timeout-ms = <50>;
                         key-positions = <0 1>;
