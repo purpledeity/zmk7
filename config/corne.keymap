@@ -84,8 +84,8 @@
                 // |          |          |  CLCK    |  END     |  PGDN    |  SLCK    |       |          |          |          |          |          |          |
                       &trans    &trans     &kp CLCK   &kp END    &kp PG_DN  &kp SLCK           &trans     &trans     &trans     &trans    &trans     &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
-                //                                  |          |          |          |       |          |          |          |
-                                                      &trans     &trans     &trans             &trans     &trans     &trans
+                //                                  |          |          |          |       |  Enter   |          |          |
+                                                      &trans     &trans     &trans           &kp KP_ENTER &trans     &trans
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
@@ -150,13 +150,13 @@
                         bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 // |          |          |          |          |          |          |       |  N lock  |  N1      |  N2      |  N3      |          |          |
-                      &trans     &trans     &trans     &trans     &trans     &trans            &kp kp_NUM &kp kp_N1  &kp kp_N2  &kp kp_N3  &trans     &trans
+                      &trans     &trans     &trans     &trans     &trans     &trans            &kp KP_NUM &kp KP_N1  &kp KP_N2  &kp KP_N3  &trans     &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |          |          |          |          |       |  Click   |  N4      |  N5      |  N6      |          |          |
-                      &trans     &trans     &trans     &trans     &trans     &trans            &mkp MB2   &kp kp_N4  &kp kp_N5  &kp kp_N6  &trans     &trans
+                      &trans     &trans     &trans     &trans     &trans     &trans            &mkp MB2   &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans     &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |          |          |          |          |       |  Middle  |  N7      |  N8      |  N9      |  N0      |          |
-                      &trans    &trans     &trans     &trans     &trans     &trans             &mkp MB3   &kp kp_N7  &kp kp_N8  &kp kp_N9  &kp kp_N0  &trans
+                      &trans    &trans     &trans     &trans     &trans     &trans             &mkp MB3   &kp KP_N7  &kp Kp_N8  &kp KP_N9  &kp KP_N0  &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |          |          |          |       |          |          |          |
                                                       &trans     &trans     &trans             &trans     &trans     &trans
