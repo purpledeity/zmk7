@@ -98,7 +98,7 @@
                       &trans    &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT          &kp CARET  &kp AMPS   &kp STAR   &kp MINUS  &kp PLUS   &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |  ~       |  (       | {        |  [       |       |  ]       |  }       |  )       |  _       |  =       |          |
-                      &trans    &kp GRAVE  &kp TILDE  &kp LPAR  &kp LBRC   &kp LBKT            &kp RBKT   &kp RBRC   &kp RPAR   &kp UNDER  &kp EQUAL  &trans
+                      &trans    &kp GRAVE  &kp TILDE  &kp LPAR  &kp LBRC   &kp LBKT            &kp RBKT   &kp RBRC   &kp RPAR   &kp UNDER  &kp EQUAL  &kp NUBS
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |          |          |          |  "|"     |       |          |          |          |          |          |          |
                       &trans    &trans     &trans     &trans     &trans     &kp PIPE           &trans     &trans     &trans     &trans     &trans     &trans
@@ -150,7 +150,7 @@
                         bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 // |          |          |          |          |          |          |       |  N lock  |  N1      |  N2      |  N3      |          |          |
-                      &trans     &trans     &trans     &trans     &trans     &trans            &trans     &kp N1     &kp N2     &kp N3     &trans     &trans
+                      &trans     &trans     &trans     &trans     &trans     &trans            &kp NUM    &kp N1     &kp N2     &kp N3     &trans     &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |          |          |          |          |       |  Click   |  N4      |  N5      |  N6      |          |          |
                       &trans     &trans     &trans     &trans     &trans     &trans            &mkp MB2   &kp N4     &kp N5     &kp N6     &trans     &trans
