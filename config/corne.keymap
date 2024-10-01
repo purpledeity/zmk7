@@ -41,7 +41,16 @@
                 layers = <GAME>; // only on game layer
                 key-positions = <0 11>; // top left and top right keys
                 bindings = <&tog GAME>; // toggle game layer off
-            };
+                };
+        };
+
+        combos {
+                compatible = "zmk,combos";
+	        combo_numb_layer {
+                    timeout-ms = <50>;
+	            key-positions = <17 39>;
+                    bindings = <&mo NUMB>;
+		};
         };
 
         keymap {
