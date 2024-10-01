@@ -78,8 +78,8 @@
                 // |          |  1       |  2       |  3       |  4       |  5       |       |  6       |  7       |  8       |  9       |  0       |          |
                       &trans    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5             &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |          |          |  NLCK    |  HOME    |  PGUP    |  PRSQ    |       |          |  left    |  right   |  DWN     |  UP      |  delete  |
-                      &trans    &trans    &kp KP_NUM  &kp HOME   &kp PG_UP  &kp PSCRN          &trans     &kp LEFT   &kp RIGHT  &kp DOWN   &kp UP     &kp DEL
+                // |          |          |          |  HOME    |  PGUP    |  PRSQ    |       |          |  left    |  right   |  DWN     |  UP      |  delete  |
+                      &trans    &trans     &trans     &kp HOME   &kp PG_UP  &kp PSCRN          &trans     &kp LEFT   &kp RIGHT  &kp DOWN   &kp UP     &kp DEL
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |  CLCK    |  END     |  PGDN    |  SLCK    |       |          |          |          |          |          |          |
                       &trans    &trans     &kp CLCK   &kp END    &kp PG_DN  &kp SLCK           &trans     &trans     &trans     &trans    &trans     &trans
@@ -150,13 +150,13 @@
                         bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 // |          |          |          |          |          |          |       |  N lock  |  N1      |  N2      |  N3      |          |          |
-                      &trans     &trans     &trans     &trans     &trans     &trans            &trans    &kp N1     &kp N2     &kp N3     &trans     &trans
+                      &trans     &trans     &trans     &trans     &trans     &trans            &kp_NUM     &kp_N1     &kp_N2     &kp_N3     &trans     &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |          |          |          |          |       |  Click   |  N4      |  N5      |  N6      |          |          |
-                      &trans     &trans     &trans     &trans     &trans     &trans            &mkp MB2   &kp N4     &kp N5     &kp N6     &trans     &trans
+                      &trans     &trans     &trans     &trans     &trans     &trans            &mkp MB2   &kp_N4     &kp_N5     &kp_N6     &trans     &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |          |          |          |          |       |  Middle  |  N7      |  N8      |  N9      |  N0      |          |
-                      &trans    &trans     &trans     &trans     &trans     &trans             &mkp MB3   &kp N7     &kp N8     &kp N9     &kp N0     &trans
+                      &trans    &trans     &trans     &trans     &trans     &trans             &mkp MB3   &kp_N7     &kp_N8     &kp_N9     &kp_N0     &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |          |          |          |       |          |          |          |
                                                       &trans     &trans     &trans             &trans     &trans     &trans
