@@ -52,6 +52,10 @@
                 };
         };
 
+        &lt {
+        tapping-term-ms = <200>;
+        };
+
         keymap {
                 compatible = "zmk,keymap";
                 default_layer {
@@ -157,10 +161,10 @@
                       &trans     &trans     &trans     &trans     &trans     &trans            &mkp MB2   &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans     &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |          |          |          |          |       |  Middle  |  N7      |  N8      |  N9      |  N0      |          |
-                      &trans    &trans     &trans     &trans     &trans     &trans             &mkp MB3   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_N0  &trans
+                      &trans    &trans     &trans     &trans     &trans      &trans            &mkp MB3   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_N0  &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |          |          |          |       |          |          |          |
-                                                      &trans     &trans     &trans             &trans     &trans     &trans
+                                                      &trans   &lt GAME ESC  &trans            &trans     &trans     &trans
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
