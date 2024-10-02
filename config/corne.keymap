@@ -21,7 +21,11 @@
                 if-layers = <LOWER RAISE>;
                 then-layer = <TRI>;
             };
-        };     
+        };  
+
+        &lt {
+        tapping-term-ms = <200>;
+        };   
 
         behaviors {
                 ht: hold_tap {
@@ -33,16 +37,6 @@
                         quick-tap-ms = <150>;
                         global-quick-tap;
                         bindings = <&kp>, <&kp>;
-                };
-
-                lt_impl: layer-tap-by-hold-tap {
-                        compatible = "zmk,behavior-hold-tap";
-                        label = "LAYER_TAP_BY_HOLD_TAP";
-                        #binding-cells = <2>;
-                        tapping-term-ms = <200>;
-                        quick-tap-ms = <0>;
-                        flavor = "tap-preferred";
-                        bindings = <&mo>, <&kp>;
                 };
         };
 
@@ -171,7 +165,7 @@
                       &trans    &trans     &trans     &trans     &trans      &trans            &mkp MB3   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_N0  &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |          |          |          |       |          |          |          |
-                                                      &trans     &lt impl(LOWER, ESC) &trans   &trans     &trans     &trans
+                                                      &trans     &lt 1 ESC   &trans            &trans     &trans     &trans
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
