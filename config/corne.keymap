@@ -164,7 +164,7 @@
                       &trans    &trans     &trans     &trans     &trans      &trans            &mkp MB3   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_N0  &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |          |          |          |       |          |          |          |
-                                                      &trans   &lt GAME ESC  &trans            &trans     &trans     &trans
+                                                      &trans   &lt LOWER ESC &trans            &trans     &trans     &trans
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
