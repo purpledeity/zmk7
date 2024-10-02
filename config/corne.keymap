@@ -165,7 +165,7 @@
                       &trans    &trans     &trans     &trans     &trans      &trans            &mkp MB3   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_N0  &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |          |          |          |       |          |          |          |
-                                                      &trans     &lt 1 ESC   &trans            &trans     &trans     &trans
+                                                      &trans     &trans   &trans            &trans     &trans     &trans
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
