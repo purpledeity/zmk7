@@ -9,13 +9,11 @@
 #define HRMR(k1,k2,k3) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3
 
 #define BASE 0
-#define NORMAN 1
-#define LOWER 2
-#define RAISE 3
-#define TRI 4
-#define GAME 5
-#define NUMB 6
-
+#define LOWER 1
+#define RAISE 2
+#define TRI 3
+#define GAME 4
+#define NUMB 5
 
 
 &lt {
@@ -76,25 +74,7 @@
                      &kp TILDE  &kp G      &kp X      &kp C      &kp V      &kp FLSH           &kp B      &kp J      &kp M      &kp DOT    &kp FSLH   &kp SQT
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |  GUI     |  LWR     |  SPC     |       |  ENT     |  RSE     |  ALT     |
-                                                      &kp LGUI   &mo 2      &kp SPACE          &kp RET    &mo 3      &kp RALT
-                //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
-                        >;
-                };
-                compatible = "zmk,keymap";
-                norman {
-                         bindings = <
-                // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                // |  TAB     |  Q       |  W       |  D       |  F       |  K       |       |  J       |  U       |  R       |  L       |  ;       |  ESC     |
-                     &kp TAB    &kp Q      &kp W      &kp D      &kp F      &kp K              &kp J      &kp U      &kp R      &kp L      &kp SEMI   &kp ESC
-                // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  CTRL    |  A       |  S       |  E       |  T       |  G       |       |  Y       |  N       |  I       |  O       |  H       |  BSPC    |
-                     &kp LSHFT  &kp A      HRML(S,    E,         T)         &kp G              &kp Y      HRML(N,    I,         O)         &kp H      &kp BSPC
-                // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  ~       |  Z       |  X       |  C       |  V       |  B       |       |  P       |  M       |  ,       |  .       |  /       |  ~       |
-                     &kp TILDE  &kp Z      &kp X      &kp C      &kp V      &kp B              &kp P      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp SQT
-                // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
-                //                                  |  GUI     |  LWR     |  SPC     |       |  ENT     |  RSE     |  ALT     |
-                                                      &kp LGUI   &mo 2      &kp SPACE          &kp RET    &mo 3      &kp RALT
+                                                      &kp LGUI   &mo 1      &kp SPACE          &kp RET    &mo 2      &kp RALT
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
@@ -146,8 +126,8 @@
                 // |  BTCLR   |  BT1     |  BT2     |  BT3     | BT4      |  BT5     |       |  PREV    |  PLAY    |  NEXT    |  VO-     |  VO+     |          |
                    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp C_PREV &kp C_PP &kp C_NEXT &kp C_VOLUME_DOWN &kp C_VOL_UP &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |          |          |  '       |  "       |          |          |       |  GAME    |  Norman  |          |          |          |          |
-                     &trans     &out OUT_USB &out OUT_BLE &trans &trans     &trans             &tog GAME &tog NORMAN &trans     &trans     &trans     &trans
+                // |          |          |  '       |  "       |          |          |       |  GAME    |          |          |          |          |          |
+                     &trans     &out OUT_USB &out OUT_BLE &trans &trans     &trans             &tog GAME  &trans     &trans     &trans     &trans     &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |          |          |          |       |          |          |          |
                                                       &trans     &trans     &trans             &trans     &trans     &trans
