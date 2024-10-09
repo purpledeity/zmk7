@@ -14,7 +14,7 @@
 #define TRI 3
 #define GAME 4
 #define NUMB 5
-
+#define FIREAPALCA 6
 
 &lt {
         tapping-term-ms = <200>;
@@ -127,7 +127,7 @@
                    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp C_PREV &kp C_PP &kp C_NEXT &kp C_VOLUME_DOWN &kp C_VOL_UP &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |  '       |  "       |          |          |       |  GAME    |          |          |          |          |          |
-                     &trans     &out OUT_USB &out OUT_BLE &trans &trans     &trans             &tog GAME  &trans     &trans     &trans     &trans     &trans
+                     &trans   &out OUT_USB &out OUT_BLE &trans   &trans     &trans             &tog GAME  &trans     &trans     &trans     &trans     &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |          |          |          |       |          |          |          |
                                                       &trans     &trans     &trans             &trans     &trans     &trans
@@ -168,6 +168,23 @@
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |          |          |          |       |          |          |          |
                                                       &trans     &lt 1 ESC   &trans            &trans     &trans     &trans
+                //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
+                        >;
+                };
+        fireapalca_layer {
+			bindings = <
+                // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+                // |  tab     |          | focus    | zoom out |  zoom in |  brush   |       |          |          |          |          |          |  toggle  |
+                     &kp TAB    &trans     &LC(N0)   &LC(MINUS) &LC(MINUS)  &kp B              &trans     &trans     &trans     &trans     &trans     &lt 0 
+                // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+                // |  Shift   |swap color|  reset   | Rotate L | Rotate R |  Pen     |       |          |          |          |          |          |          |
+                     &kp SHIFT  &kp X      &kp UP     &kp LEFT   &kp RIGHT  &kp S              &trans     &trans     &trans     &trans     &trans     &trans
+                // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+                // |  Undo    |  Redo    |          |  copy    |  paste   |  Fill    |       |          |          |          |          |          |          |
+                     &LC(Z)    &LC(LS(Z))   &trans     &LC(C)     &LC(V)     &kp N              &trans     &trans     &trans     &trans     &trans     &trans 
+                // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
+                //                                  | Prev Pen | Next pen |  space   |       |          | type     |          | 
+                                                      &kp LBKT   &kp RBKT   &kp Space          &trans     &mo 0      &trans                     
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
