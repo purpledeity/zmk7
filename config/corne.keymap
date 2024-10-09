@@ -4,7 +4,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/mouse.h>
 
-
 // Home row mods macro
 #define HRML(k2,k3,k4) &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 #define HRMR(k1,k2,k3) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3
@@ -15,7 +14,6 @@
 #define TRI 3
 #define GAME 4
 #define NUMB 5
-#define NORMAN 6
 
 
 &lt {
@@ -66,14 +64,14 @@
                 default_layer {
                          bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                // |  TAB     |  Q       |  W       |  D       |  F       |  Z       |       |  ;       |  U       |  K       |  Y       |  P       |  ESC     |
-                     &kp TAB    &kp Q      &kp W      &kp D      &kp F      &kp Z              &kp SEMI   &kp U      &kp K      &kp Y      &kp P      &kp ESC
+                // |  TAB     |  Q       |  W       |  D       |  F       |  K       |       |  J       |  U       |  R       |  L       |  ;       |  ESC     |
+                     &kp TAB    &kp Q      &kp W      &kp D      &kp F      &kp K              &kp J      &kp U      &kp R      &kp L      &kp SEMI   &kp ESC
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  CTRL    |  A       |  S       |  E       |  R       |  L       |       |  H       |  L       |  I       |  O       |  T       |  BSPC    |
-                     &kp LSHFT  &kp A      HRML(S,    E,         R)         &kp L              &kp H      HRML(N,    I,         O)         &kp T      &kp BSPC
+                // |  CTRL    |  A       |  S       |  E       |  T       |  G       |       |  Y       |  N       |  I       |  O       |  H       |  BSPC    |
+                     &kp LSHFT  &kp A      HRML(S,    E,         T)         &kp G              &kp Y      HRML(N,    I,         O)         &kp H      &kp BSPC
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  ~       |  G       |  X       |  C       |  V       |  /       |       |  B       |  J       |  M       |  .       |  ,       |  ~       |
-                     &kp TILDE  &kp G      &kp X      &kp C      &kp V      &kp FSLH           &kp B      &kp J      &kp M      &kp DOT    &kp COMMA  &kp SQT
+                // |  ~       |  Z       |  X       |  C       |  V       |  B       |       |  P       |  M       |  ,       |  .       |  /       |  ~       |
+                     &kp TILDE  &kp Z      &kp X      &kp C      &kp V      &kp B              &kp P      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp SQT
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |  GUI     |  LWR     |  SPC     |       |  ENT     |  RSE     |  ALT     |
                                                       &kp LGUI   &mo 1      &kp SPACE          &kp RET    &mo 2      &kp RALT
@@ -128,8 +126,8 @@
                 // |  BTCLR   |  BT1     |  BT2     |  BT3     | BT4      |  BT5     |       |  PREV    |  PLAY    |  NEXT    |  VO-     |  VO+     |          |
                    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp C_PREV &kp C_PP &kp C_NEXT &kp C_VOLUME_DOWN &kp C_VOL_UP &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |          |          |  '       |  "       |          |          |       |  GAME    |  NORMAN  |          |          |          |          |
-                     &trans     &out OUT_USB &out OUT_BLE &trans &trans     &trans             &tog GAME &tog NORMAN &trans     &trans     &trans     &trans
+                // |          |          |  '       |  "       |          |          |       |  GAME    |          |          |          |          |          |
+                     &trans     &out OUT_USB &out OUT_BLE &trans &trans     &trans             &tog GAME  &trans     &trans     &trans     &trans     &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |          |          |          |       |          |          |          |
                                                       &trans     &trans     &trans             &trans     &trans     &trans
@@ -170,24 +168,6 @@
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |          |          |          |       |          |          |          |
                                                       &trans     &lt 1 ESC   &trans            &trans     &trans     &trans
-                //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
-                        >;
-                };
-
-        norman_layer {
-                        bindings = <
-                // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                // |  TAB     |  Q       |  W       |  D       |  F       |  K       |       |  J       |  U       |  R       |  L       |  ;       |  ESC     |
-                     &kp TAB    &kp Q      &kp W      &kp D      &kp F      &kp K              &kp J      &kp U      &kp R      &kp L      &kp SEMI   &kp ESC
-                // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  CTRL    |  A       |  S       |  E       |  T       |  G       |       |  Y       |  N       |  I       |  O       |  H       |  BSPC    |
-                     &kp LSHFT  &kp A      HRML(S,    E,         T)         &kp G              &kp Y      HRML(N,    I,         O)         &kp H      &kp BSPC
-                // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  ~       |  Z       |  X       |  C       |  V       |  B       |       |  P       |  M       |  ,       |  .       |  /       |  ~       |
-                     &kp TILDE  &kp Z      &kp X      &kp C      &kp V      &kp B              &kp P      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp SQT
-                // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
-                //                                  |  GUI     |  LWR     |  SPC     |       |  ENT     |  RSE     |  ALT     |
-                                                      &kp LGUI   &mo 1      &kp SPACE          &kp RET    &mo 2      &kp RALT
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
