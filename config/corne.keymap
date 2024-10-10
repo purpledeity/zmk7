@@ -178,7 +178,7 @@
                       &kp TAB    &trans     &kp LC(N0)   &kp LC(MINUS) &kp LC(PLUS)  &kp B              &kp J      &kp U      &kp R      &kp L      &kp SEMI   &kp ESC
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |  CTRL    |  A       |  S       |  E       |  T       |  G       |       |  Y       |  N       |  I       |  O       |  H       |  BSPC    |
-                     &kp SHIFT  &kp X     &kp UP     &kp LEFT   &kp RIGHT  &kp S              &kp Y      HRML(N,    I,         O)         &kp H      &kp BSPC
+                     &kp LSHIFT  &kp X     &kp UP     &kp LEFT   &kp RIGHT  &kp S              &kp Y      HRML(N,    I,         O)         &kp H      &kp BSPC
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |  ~       |  Z       |  X       |  C       |  V       |  B       |       |  P       |  M       |  ,       |  .       |  /       |  ~       |
                      &trans    &trans     &trans     &trans     &trans      &trans              &kp P      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp SQT
