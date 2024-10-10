@@ -181,10 +181,10 @@
                      &kp SHIFT  &kp X     &kp UP     &kp LEFT   &kp RIGHT  &kp S              &kp Y      HRML(N,    I,         O)         &kp H      &kp BSPC
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |  ~       |  Z       |  X       |  C       |  V       |  B       |       |  P       |  M       |  ,       |  .       |  /       |  ~       |
-                     &kp LC(Z)    &kp LC(Z)   &trans     &kp LC(C)     &kp LC(V)     &kp N              &kp P      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp SQT
+                     &trans    &trans     &trans     &trans     &trans      &trans              &kp P      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp SQT
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |  GUI     |  LWR     |  SPC     |       |  ENT     |  RSE     |  ALT     |
-                                                      &kp LBKT   &kp RBKT   &kp Space          &kp RET    &mo 2      &kp RALT
+                                                      &trans     &trans     &trans         &kp RET    &mo 2      &kp RALT
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
