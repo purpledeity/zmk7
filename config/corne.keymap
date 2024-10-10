@@ -65,13 +65,13 @@
                          bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 // |  TAB     |  Q       |  W       |  D       |  F       |  K       |       |  J       |  U       |  R       |  L       |  ;       |  ESC     |
-                     &kp TAB    &kp Q      &kp W      &kp D      &kp F      &kp K              &kp J      &kp U      &kp R      &kp L      &kp SEMI   &kp ESC
+                     &kp TAB    &kp Q      &kp W      &kp D      &kp F      &kp Z              &kp SEMI   &kp U      &kp k      &kp Y      &kp p   &kp ESC
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |  CTRL    |  A       |  S       |  E       |  T       |  G       |       |  Y       |  N       |  I       |  O       |  H       |  BSPC    |
-                     &kp LSHFT  &kp A      HRML(S,    E,         T)         &kp G              &kp Y      HRML(N,    I,         O)         &kp H      &kp BSPC
+                     &kp LSHFT  &kp A      HRML(S,    E,         R)         &kp L              &kp h      HRML(N,    I,         O)         &kp T      &kp BSPC
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |  ~       |  Z       |  X       |  C       |  V       |  B       |       |  P       |  M       |  ,       |  .       |  /       |  ~       |
-                     &kp TILDE  &kp Z      &kp X      &kp C      &kp V      &kp B              &kp P      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp SQT
+                     &kp TILDE  &kp G      &kp x      &kp C      &kp V      &kp FLSH           &kp B      &kp J      &kp m      &kp COMMA  &kp DOT   &kp SQT
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |  GUI     |  LWR     |  SPC     |       |  ENT     |  RSE     |  ALT     |
                                                       &kp LGUI   &mo 1      &kp SPACE          &kp RET    &mo 2      &kp RALT
