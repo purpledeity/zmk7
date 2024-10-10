@@ -127,7 +127,7 @@
                    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp C_PREV &kp C_PP &kp C_NEXT &kp C_VOLUME_DOWN &kp C_VOL_UP &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |  '       |  "       |          |          |       |  GAME    |  brush   |          |          |          |          |
-                     &trans   &out OUT_USB &out OUT_BLE &trans   &trans     &trans             &tog GAME &tog BRUSH  &trans     &trans     &trans     &trans
+                     &trans   &out OUT_USB &out OUT_BLE &trans   &trans     &trans             &tog GAME &trans  &trans     &trans     &trans     &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |          |          |          |       |          |          |          |
                                                       &trans     &trans     &trans             &trans     &trans     &trans
@@ -175,7 +175,7 @@
 			bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 // |  tab     |          | focus    | zoom out |  zoom in |  brush   |       |          |          |          |          |          |  toggle  |
-                     &kp TAB    &trans     &kp LC(N0)   &kp LC(MINUS) &kp LC(PLUS)  &kp B       &trans     &trans     &trans     &trans     &trans   &tog brush
+                     &kp TAB    &trans     &kp LC(N0)   &kp LC(MINUS) &kp LC(PLUS)  &kp B       &trans     &trans     &trans     &trans     &trans   &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |  Shift   |swap color|  reset   | Rotate L | Rotate R |  Pen     |       |          |          |          |          |          |          |
                      &kp LSHIFT  &kp X     &kp UP     &kp LEFT   &kp RIGHT  &kp S               &trans     &trans     &trans     &trans     &trans     &trans
@@ -184,7 +184,7 @@
                     &kp LC(Z) &kp LC(LS(Z)) &trans    &kp LC(C)  &kp LC(V)  &kp N               &trans     &trans     &trans     &trans     &trans     &trans 
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  | Prev Pen | Next pen |  space   |       |          |   type   |          | 
-                                                      &trans     &trans     &trans              &trans     &mo BASE   &trans                     
+                                                      &trans     &trans     &trans              &trans     &trans  &trans                     
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
