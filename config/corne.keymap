@@ -175,16 +175,16 @@
 			bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 // |  tab     |          | focus    | zoom out |  zoom in |  brush   |       |          |          |          |          |          |  toggle  |
-                     &kp TAB    &trans    &kp LC(N0)   &kp LC(MINUS) &kp LC(PLUS)  &kp B        &trans     &trans     &trans     &trans     &trans     &lt 0 
+                     &kp TAB    &trans     &kp LC(N0)   &kp LC(MINUS) &kp LC(PLUS)  &kp B        &trans     &trans     &trans     &trans     &trans     &trans 
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |  Shift   |swap color|  reset   | Rotate L | Rotate R |  Pen     |       |          |          |          |          |          |          |
-                     &kp LSHIFT &kp X      &kp UP     &kp LEFT   &kp RIGHT  &kp S               &trans     &trans     &trans     &trans     &trans     &trans
+                     &kp LSHIFT  &kp X     &kp UP     &kp LEFT   &kp RIGHT  &kp S               &trans     &trans     &trans     &trans     &trans     &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |  Undo    |  Redo    |          |  copy    |  paste   |  Fill    |       |          |          |          |          |          |          |
-                     &kp LC(Z)  &trans &trans  &kp LC(C)  &kp LC(V)  &kp N              &trans     &trans     &trans     &trans     &trans     &trans 
+                     &trans     &trans     &trans     &trans     &trans     &trans              &trans     &trans     &trans     &trans     &trans     &trans 
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  | Prev Pen | Next pen |  space   |       |          | type     |          | 
-                                                      &kp LBKT   &kp RBKT   &kp Space          &trans     &mo 0      &trans                     
+                                                      &trans     &trans      &trans             &trans     &trans      &trans                     
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
