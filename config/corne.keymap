@@ -62,16 +62,16 @@
         keymap {
                 compatible = "zmk,keymap";
                 default_layer {
-                        bindings = <
+                         bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                // |  TAB     |  Q       |  W       |  D       |  F       |  Z       |       |  ;       |  U       |  K       |  Y       |  P       |  ESC     |
-                     &kp TAB    &kp Q      &kp W      &kp D      &kp F      &kp Z              &kp SEMI     &kp U      &kp K      &kp Y      &kp P      &kp ESC
+                // |  TAB     |  Q       |  W       |  D       |  F       |  K       |       |  J       |  U       |  R       |  L       |  ;       |  ESC     |
+                     &kp TAB    &kp Q      &kp W      &kp D      &kp F      &kp K              &kp J      &kp U      &kp R      &kp L      &kp SEMI   &kp ESC
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  CTRL    |  A       |  S       |  E       |  R       |  L       |       |  H       |  N       |  I       |  O       |  T       |  BSPC    |
-                     &kp LSHFT  &kp A      HRML(S,    E,         R)         &kp L              &kp H      HRML(N,    I,         O)         &kp T      &kp BSPC
+                // |  CTRL    |  A       |  S       |  E       |  T       |  G       |       |  Y       |  N       |  I       |  O       |  H       |  BSPC    |
+                     &kp LSHFT  &kp A      HRML(S,    E,         T)         &kp G              &kp Y      HRML(N,    I,         O)         &kp H      &kp BSPC
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  ~       |  G       |  X       |  C       |  V       |  ?       |       |  B       |  J       |  M       |  .       |  /       |  "       |
-                     &kp TILDE  &kp G      &kp X      &kp C      &kp V      &kp FLSH           &kp B      &kp J      &kp M      &kp DOT    &kp FSLH   &kp SQT
+                // |  ~       |  Z       |  X       |  C       |  V       |  B       |       |  P       |  M       |  ,       |  .       |  /       |  ~       |
+                     &kp TILDE  &kp Z      &kp X      &kp C      &kp V      &kp B              &kp P      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp SQT
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |  GUI     |  LWR     |  SPC     |       |  ENT     |  RSE     |  ALT     |
                                                       &kp LGUI   &mo 1      &kp SPACE          &kp RET    &mo 2      &kp RALT
@@ -79,8 +79,9 @@
                         >;
                 };
 
-        lower_layer {
+    lower_layer {
                         bindings = <
+
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 // |          |  1       |  2       |  3       |  4       |  5       |       |  6       |  7       |  8       |  9       |  0       |          |
                       &trans    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5             &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &trans
@@ -171,7 +172,7 @@
                         >;
                 };
         brush_layer {
-			bindings = <
+											bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 // |  tab     |          | focus    | zoom out |  zoom in |  brush   |       |          |          |          |          |          |  toggle  |
                      &kp TAB    &trans     &kp LC(N0)   &kp LC(MINUS) &kp LC(PLUS)  &kp B       &trans     &trans     &trans     &trans     &trans   &tog BRUSH
