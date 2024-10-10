@@ -172,19 +172,19 @@
                         >;
                 };
         brush_layer {
-                         bindings = <
+			bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                // |  TAB     |  Q       |  W       |  D       |  F       |  K       |       |  J       |  U       |  R       |  L       |  ;       |  ESC     |
-                      &kp TAB    &trans     &kp LC(N0)   &kp LC(MINUS) &kp LC(PLUS)  &kp B              &kp J      &kp U      &kp R      &kp L      &kp SEMI   &kp ESC
+                // |  tab     |          | focus    | zoom out |  zoom in |  brush   |       |          |          |          |          |          |  toggle  |
+                     &kp TAB    &trans    &kp LC(N0)   &kp LC(MINUS) &kp LC(PLUS)  &kp B        &trans     &trans     &trans     &trans     &trans     &lt 0 
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  CTRL    |  A       |  S       |  E       |  T       |  G       |       |  Y       |  N       |  I       |  O       |  H       |  BSPC    |
-                     &kp LSHIFT  &kp X     &kp UP     &kp LEFT   &kp RIGHT  &kp S              &kp Y      HRML(N,    I,         O)         &kp H      &kp BSPC
+                // |  Shift   |swap color|  reset   | Rotate L | Rotate R |  Pen     |       |          |          |          |          |          |          |
+                     &kp LSHIFT &kp X      &kp UP     &kp LEFT   &kp RIGHT  &kp S               &trans     &trans     &trans     &trans     &trans     &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  ~       |  Z       |  X       |  C       |  V       |  B       |       |  P       |  M       |  ,       |  .       |  /       |  ~       |
-                     &trans    &trans     &trans     &trans     &trans      &trans              &kp P      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp SQT
+                // |  Undo    |  Redo    |          |  copy    |  paste   |  Fill    |       |          |          |          |          |          |          |
+                     &LC(Z)    &LC(LS(Z))  &trans     &LC(C)     &LC(V)     &kp N              &trans     &trans     &trans     &trans     &trans     &trans 
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
-                //                                  |  GUI     |  LWR     |  SPC     |       |  ENT     |  RSE     |  ALT     |
-                                                      &trans     &trans     &trans         &kp RET    &mo 2      &kp RALT
+                //                                  | Prev Pen | Next pen |  space   |       |          | type     |          | 
+                                                      &kp LBKT   &kp RBKT   &kp Space          &trans     &mo 0      &trans                     
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
