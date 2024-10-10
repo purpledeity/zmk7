@@ -178,13 +178,13 @@
                       &kp TAB    &trans     &kp LC(N0)   &kp LC(MINUS) &kp LC(PLUS)  &kp B              &kp J      &kp U      &kp R      &kp L      &kp SEMI   &kp ESC
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |  CTRL    |  A       |  S       |  E       |  T       |  G       |       |  Y       |  N       |  I       |  O       |  H       |  BSPC    |
-                     &kp LSHFT  &kp A      HRML(S,    E,         T)         &kp G              &kp Y      HRML(N,    I,         O)         &kp H      &kp BSPC
+                     &kp SHIFT  &kp X      &kp UP     &kp LEFT   &kp RIGHT  &kp S              &kp Y      HRML(N,    I,         O)         &kp H      &kp BSPC
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |  ~       |  Z       |  X       |  C       |  V       |  B       |       |  P       |  M       |  ,       |  .       |  /       |  ~       |
-                     &kp TILDE  &kp Z      &kp X      &kp C      &kp V      &kp B              &kp P      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp SQT
+                     &kp LC(Z)    &kp LC(LS(Z))   &trans     &kp LC(C)     &kp LC(V)     &kp N              &kp P      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp SQT
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |  GUI     |  LWR     |  SPC     |       |  ENT     |  RSE     |  ALT     |
-                                                      &kp LGUI   &mo 1      &kp SPACE          &kp RET    &mo 2      &kp RALT
+                                                      &kp LBKT   &kp RBKT   &kp Space          &kp RET    &mo 2      &kp RALT
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
