@@ -181,7 +181,7 @@
                      &kp LSHIFT &kp X      &kp UP     &kp LEFT   &kp RIGHT  &kp S               &trans     &trans     &trans     &trans     &trans     &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |  Undo    |  Redo    |          |  copy    |  paste   |  Fill    |       |          |          |          |          |          |          |
-                     &LC(Z)    &LC(LS(Z))  &trans     &LC(C)     &LC(V)     &kp N              &trans     &trans     &trans     &trans     &trans     &trans 
+                     &kp LC(Z)  &kp LC(LS(Z)) &trans  &kp LC(C)  &kp LC(V)  &kp N              &trans     &trans     &trans     &trans     &trans     &trans 
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  | Prev Pen | Next pen |  space   |       |          | type     |          | 
                                                       &kp LBKT   &kp RBKT   &kp Space          &trans     &mo 0      &trans                     
