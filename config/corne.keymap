@@ -195,7 +195,7 @@
                         bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 // |          |          |          |          |          |          |       |          |          |          |          |          |          |
-                      &trans     &trans     &trans     &trans     &trans     &trans             &msc SCROLL_UP     &trans     &trans     &trans     &trans     &trans
+                      &trans     &trans     &trans     &trans     &trans     &trans             &mwh SCROLL_UP     &trans     &trans     &trans     &trans     &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |          |          |          |          |       |          |          |          |          |          |          |
                       &trans     &trans     &trans     &trans     &trans     &trans             &trans  &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_DOWN &mmv MOVE_UP &trans
