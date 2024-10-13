@@ -173,7 +173,7 @@
                         >;
                 };
         brush_layer {
-											bindings = <
+			bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 // |  tab     | transform| focus    | zoom out |  zoom in |  brush   |       |          |          |          |          |          |  toggle  |
                      &kp TAB     &kp T    &kp LC(N0)   &kp LC(MINUS) &kp LC(PLUS)  &kp B       &trans     &trans     &trans     &trans     &trans    &tog BRUSH
@@ -193,10 +193,10 @@
                         bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 // |          |          |          |          |          |          |       |          |          |          |          |          |          |
-                      &trans     &trans     &trans     &trans     &trans     &trans             &trans     &trans     &trans     &trans     &trans     &trans
+                      &trans     &trans     &trans     &trans     &trans     &trans          &mmv SCROLL_UP &mmv SCROLL_LEFT &mmv SCROLL_RIGHT &trans &trans &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |          |          |          |          |       |          |          |          |          |          |          |
-                      &trans     &trans     &trans     &trans     &trans     &trans             &trans     &mmv MOVE_UP     &trans     &trans     &trans     &trans
+                      &trans     &trans     &trans     &trans     &trans     &trans          &mmv SCROLL_DOWN &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_DOWN &mmv MOVE_UP &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |          |          |          |          |       |          |          |          |          |          |          |
                       &trans     &trans     &trans     &trans     &trans     &trans             &trans     &trans     &trans     &trans     &trans     &trans
