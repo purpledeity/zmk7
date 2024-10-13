@@ -15,6 +15,7 @@
 #define GAME 4
 #define NUMB 5
 #define BRUSH 6
+#define MOUSE 7
 
 &lt {
         tapping-term-ms = <200>;
@@ -160,11 +161,11 @@
                 // |          |          |          |          |          |          |       |  N lock  |  N1      |  N2      |  N3      |          |          |
                       &trans     &trans     &trans     &trans     &trans     &trans            &kp KP_NUM &kp KP_N1  &kp KP_N2  &kp KP_N3  &trans     &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |          |          |          |          |          |          |       |  Click   |  N4      |  N5      |  N6      |          |          |
-                      &trans     &trans     &trans     &trans     &trans     &trans            &mkp MB2   &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans     &trans
+                // |          |          |          |          |          |          |       |          |  N4      |  N5      |  N6      |          |          |
+                      &trans     &trans     &trans     &trans     &trans     &trans            &trans     &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans     &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |          |          |          |          |          |          |       |  Middle  |  N7      |  N8      |  N9      |  N0      |          |
-                      &trans    &trans     &trans     &trans     &trans      &trans            &mkp MB3   &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_N0  &trans
+                // |          |          |          |          |          |          |       |          |  N7      |  N8      |  N9      |  N0      |          |
+                      &trans    &trans     &trans     &trans     &trans      &trans            &trans     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_N0  &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |          |          |          |       |          |          |          |
                                                       &trans     &trans      &trans            &trans     &trans     &trans
@@ -185,6 +186,23 @@
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  | Prev Pen | Next pen |  space   |       |          |   type   |          | 
                                                       &kp LBKT   &kp RBKT   &kp SPACE           &trans     &mo 0      &trans                     
+                //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
+                        >;
+                };
+        mouse_layer {
+                        bindings = <
+                // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
+                // |          |          |          |          |          |          |       |          |          |          |          |          |          |
+                      &trans     &trans     &trans     &trans     &trans     &trans           &mmv SCROLL_UP &mmv SCROLL_LEFT &mmv SCROLL_RIGHT &trans &trans &trans
+                // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+                // |          |          |          |          |          |          |       |          |          |          |          |          |          |
+                      &trans     &trans     &trans     &trans     &trans     &trans           &mmv SCROLL_DOWN &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_DOWN &mmv MOVE_UP &trans
+                // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+                // |          |          |          |          |          |          |       |          |          |          |          |          |          |
+                      &trans     &trans     &trans     &trans     &trans     &trans             &trans     &trans     &trans     &trans     &trans     &trans
+                // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
+                //                                  |          |          |          |       |          |          |          |
+                                                       &trans     &trans     &trans            &mkp LCLK  &mkp RCLK   &trans
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
