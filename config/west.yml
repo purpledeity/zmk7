@@ -9,5 +9,9 @@ manifest:
       remote: zmkfirmware
       revision: mouse-ftc                   # <--- CHANGE REVISION
       import: app/west.yml
+    - name: zmk2
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
   self:
     path: config
