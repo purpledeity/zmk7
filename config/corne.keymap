@@ -196,7 +196,7 @@
                       &trans     &trans     &trans     &trans     &trans     &trans             &trans     &trans     &trans     &trans     &trans     &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |          |          |          |          |       |          |          |          |          |          |          |
-                      &trans     &trans     &trans     &trans     &trans     &trans             &trans     &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_DOWN &mmv MOVE_UP &trans
+                      &trans     &trans     &trans     &trans     &trans     &trans             &trans     &trans     &trans     &trans     &trans     &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |          |          |          |          |       |          |          |          |          |          |          |
                       &trans     &trans     &trans     &trans     &trans     &trans             &trans     &trans     &trans     &trans     &trans     &trans
