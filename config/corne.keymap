@@ -174,8 +174,8 @@
         brush_layer {
 											bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                // |  tab     |          | focus    | zoom out |  zoom in |  brush   |       |          |          |          |          |          |  toggle  |
-                     &kp TAB    &trans     &kp LC(N0)   &kp LC(MINUS) &kp LC(PLUS)  &kp B       &trans     &trans     &trans     &trans     &trans   &tog BRUSH
+                // |  tab     | transform| focus    | zoom out |  zoom in |  brush   |       |          |          |          |          |          |  toggle  |
+                     &kp TAB     &kp T    &kp LC(N0)   &kp LC(MINUS) &kp LC(PLUS)  &kp B       &trans     &trans     &trans     &trans     &trans    &tog BRUSH
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |  Shift   |swap color|  reset   | Rotate L | Rotate R |  Pen     |       |          |          |          |          |          |          |
                      &kp LSHIFT  &kp X     &kp UP     &kp LEFT   &kp RIGHT  &kp S               &trans     &trans     &trans     &trans     &trans     &trans
