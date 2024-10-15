@@ -110,7 +110,7 @@
                       &trans    &kp GRAVE  &kp PIPE   &kp LPAR  &kp LBRC   &kp LBKT            &kp RBKT   &kp RBRC   &kp RPAR   &kp UNDER  &kp EQUAL  &kp NUBS
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |          |          |          |          |       |          |          |          |          |          |          |
-                      &trans    &trans     &trans     &trans     &trans     &trans             &trans     &trans     &trans     &trans     &trans     &trans
+                &studio_unlock  &trans     &trans     &trans     &trans     &trans             &trans     &trans     &trans     &trans     &trans     &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |          |          |          |       |          |          |          |
                                                       &trans     &trans     &trans             &trans     &trans     &trans
