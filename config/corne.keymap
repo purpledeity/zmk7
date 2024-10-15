@@ -65,14 +65,14 @@
                 default_layer {
                          bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                // |  TAB     |  J       |  P       |  U       |  Q       |  /       |       |  ;       |  Z       |  L       |  G       |  V       |  ESC     |
-                     &kp TAB    &kp J      &kp P      &kp U      &kp Q      &kp FSLH           &kp SEMI   &kp Z      &kp L      &kp G      &kp V      &kp ESC
+                // |  TAB     |  Q       |  W       |  F       |  P       |  B       |       |  J       |  L       |  U       |  Y       |  ;       |  ESC     |
+                     &kp TAB    &kp Q      &kp W      &kp F      &kp P      &kp B              &kp J      &kp L      &kp U      &kp Y      &kp SEMI   &kp ESC
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  CTRL    |  M       |  S       |  E       |  A       |  Y       |       |  H       |  O       |  T       |  I       |  N       |  BSPC    |
-                     &kp LSHFT  &kp M      HRML(S,    E,         A)         &kp Y              &kp H      HRML(O,    T,         I)         &kp N      &kp BSPC
+                // |  CTRL    |  A       |  R       |  S       |  T       |  G       |       |  K       |  N       |  E       |  I       |  O       |  BSPC    |
+                     &kp LSHFT  &kp A      HRML(R,    S,         T)         &kp G              &kp K      HRML(N,    E,         I)         &kp O      &kp BSPC
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  ~       |  X       |  C       |  B       |  D       |  ,       |       |  .       |  R       |  F       |  W       |  K       |  ~       |
-                     &kp TILDE  &kp X      &kp C      &kp B      &kp D      &kp COMMA          &kp DOT    &kp R      &kp F      &kp W      &kp K      &kp SQT
+                // |  ~       |  Z       |  X       |  C       |  D       |  V       |       |  M       |  H       |  ,       |  .       |  /       |  ~       |
+                     &kp TILDE  &kp Z      &kp X      &kp C      &kp D      &kp V              &kp M      &kp H      &kp COMMA  &kp DOT    &kp FSLH   &kp SQT
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |  GUI     |  LWR     |  SPC     |       |  ENT     |  RSE     |  ALT     |
                                                       &mo 7      &mo 1      &kp SPACE          &kp RET    &mo 2      &kp RALT
