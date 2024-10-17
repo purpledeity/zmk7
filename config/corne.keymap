@@ -42,6 +42,13 @@
                         bindings = <&kp>, <&kp>;
                 };
         };
+                gresc: mod_delete {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp BSPC>, <&kp DEL >;
+                        mods = <(MOD_LALT|MOD_LCTL)>;
+                };
+        };
 
         combos {
             compatible = "zmk,combos";
@@ -58,6 +65,7 @@
                         bindings = <&mo NUMB>;
                 };
         };
+        
 
 
         keymap {
