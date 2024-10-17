@@ -19,6 +19,7 @@
 
 &mt {
     tapping-term-ms = <400>;
+    require-prior-idle-ms = <125>;
 };   
 
 / {
@@ -39,21 +40,23 @@
                         tapping-term-ms = <220>;
                         quick-tap-ms = <150>;
                         global-quick-tap;
+                        require-prior-idle-ms = <125>;
                         bindings = <&kp>, <&kp>;
                 };
                 
+                mdel: mod_del {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&gresc>, <&kp RET>;
+                        mods = <(MOD_LALT)>;
+                };
                 gresc: grave_escape {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp BSPC>, <&kp DEL>;
                         mods = <(MOD_LALT|MOD_LCTL)>;
                 };
-                td0: tap_dance_0 {
-                        compatible = "zmk,behavior-tap-dance";
-                        #binding-cells = <0>;
-                        tapping-term-ms = <200>;
-                        bindings = <&gresc>, <&kp RET>;
-                };
+                
         };
 
         combos {
@@ -89,7 +92,7 @@
                      &kp TILDE  &kp G      &kp X      &kp C      &kp V      &kp Z              &kp B      &kp M      &kp P      &kp COMMA  &kp DOT    &kp SQT
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |  GUI     |  LWR     |  SPC     |       |  ENT     |  RSE     |  ALT     |
-                                                      &mo 7      &mo 1    &mt LSHFT SPACE      &td0       &mo 2      &kp RALT
+                                                      &mo 7      &mo 1    &mt LSHFT SPACE      &mdel       &mo 2      &kp RALT
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
