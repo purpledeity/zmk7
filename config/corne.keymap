@@ -71,8 +71,8 @@
                 // |  CTRL    |  A       |  S       |  E       |  R       |  L       |       |  H       |  N       |  I       |  T       |  O       |  BSPC    |
                      &kp LSHFT  &kp A      HRML(S,    E,         R)         &kp L              &kp H      HRML(N,    I,         T)         &kp O      &kp BSPC
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  ~       |  G       |  X       |  C       |  V       |  Z       |       |  B       |  M       |  J       |  ,       |  .       |  ~       |
-                     &kp TILDE  &kp G      &kp X      &kp C      &kp V      &kp Z              &kp B      &kp M      &kp J      &kp COMMA  &kp DOT    &kp SQT
+                // |  ~       |  G       |  X       |  C       |  V       |  Z       |       |  B       |  M       |  p       |  ,       |  .       |  ~       |
+                     &kp TILDE  &kp G      &kp X      &kp C      &kp V      &kp Z              &kp B      &kp M      &kp P      &kp COMMA  &kp DOT    &kp SQT
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |  GUI     |  LWR     |  SPC     |       |  ENT     |  RSE     |  ALT     |
                                                       &mo 7      &mo 1      &kp SPACE          &kp RET    &mo 2      &kp RALT
