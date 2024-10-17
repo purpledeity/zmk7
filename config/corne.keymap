@@ -41,11 +41,11 @@
                         global-quick-tap;
                         bindings = <&kp>, <&kp>;
                 };
-        };
-                gresc: mod_delete {
+                
+                gresc: grave_escape {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp BSPC>, <&kp DEL >;
+                        bindings = <&kp BSPC>, <&kp DEL>;
                         mods = <(MOD_LALT|MOD_LCTL)>;
                 };
         };
