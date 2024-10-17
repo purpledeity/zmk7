@@ -68,8 +68,8 @@
                 // |  TAB     |  Q       |  W       |  D       |  F       |  /       |       |  ;       |  U       |  K       |  Y       |  P       |  ESC     |
                      &kp TAB    &kp Q      &kp W      &kp D      &kp F      &kp FSLH              &kp SEMI   &kp U      &kp K      &kp Y      &kp P      &kp ESC
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  CTRL    |  A       |  S       |  E       |  R       |  L       |       |  H       |  N       |  T       |  I       |  O       |  BSPC    |
-                     &kp LSHFT  &kp A      HRML(S,    E,         R)         &kp L              &kp H      HRML(N,    T,         I)         &kp O      &kp BSPC
+                // |  CTRL    |  A       |  S       |  E       |  R       |  L       |       |  H       |  N       |  I       |  T       |  O       |  BSPC    |
+                     &kp LSHFT  &kp A      HRML(S,    E,         R)         &kp L              &kp H      HRML(N,    I,         T)         &kp O      &kp BSPC
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |  ~       |  G       |  X       |  C       |  V       |  Z       |       |  B       |  J       |  M       |  ,       |  .       |  ~       |
                      &kp TILDE  &kp G      &kp X      &kp C      &kp V      &kp Z              &kp B      &kp J      &kp M      &kp COMMA  &kp DOT    &kp SQT
