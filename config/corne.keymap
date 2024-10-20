@@ -46,12 +46,14 @@
                 gresc: grave_escape {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
+                        retro-tap;
                         bindings = <&kp BSPC>, <&kp DEL>;
                         mods = <(MOD_LALT|MOD_LCTL)>;
                 };
                 td0: tap_dance_0 {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
+                        retro-tap;
                         tapping-term-ms = <200>;
                         bindings = <&gresc>, <&kp RET>;
                 };
