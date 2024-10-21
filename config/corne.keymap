@@ -8,6 +8,8 @@
 #define HRML(k2,k3,k4) &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 #define HRMR(k1,k2,k3) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3
 
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500
+
 #define BASE 0
 #define LOWER 1
 #define RAISE 2
@@ -21,19 +23,13 @@
     tapping-term-ms = <400>;
     require-prior-idle-ms = <500>;
 };   
-/omit-if-no-ref/ fmmv: fast_mouse_move {
-            compatible = "zmk,behavior-input-two-axis";
-            #binding-cells = <1>;
-            x-input-code = <INPUT_REL_X>;
-            y-input-code = <INPUT_REL_Y>;
-            time-to-max-speed-ms = <200>;
-            acceleration-exponent = <1>;
-        };
-        fmmv_input_listener {
-            compatible = "zmk,input-listener";
-            scale-multiplier = <6>;
-            device = <&fmmv>;
-        };
+
+&mmv {
+    acceleration-exponent = <1>;      // 1
+    time-to-max-speed-ms = <500>;     // 300
+    delay-ms = <0>;                   // 0
+};
+
 / {
         conditional_layers {
             compatible = "zmk,conditional-layers";
@@ -110,7 +106,7 @@
                         >;
                 };
 
-    lower_layer {
+        lower_layer {
                         bindings = <
 
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
