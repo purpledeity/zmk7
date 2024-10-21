@@ -22,7 +22,7 @@
 
 &mt {
     tapping-term-ms = <575>;
-    require-prior-idle-ms = <150>;
+    require-prior-idle-ms = <200>;
 };   
 
 &mmv {
