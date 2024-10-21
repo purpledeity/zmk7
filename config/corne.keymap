@@ -9,7 +9,6 @@
 #define HRMR(k1,k2,k3) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20
 
 #define BASE 0
 #define LOWER 1
@@ -31,46 +30,41 @@
     delay-ms = <0>;                   // 0
 };
 
-&msc {
-    acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <40>;      // 300
-    delay-ms = <0>;                   // 0
-};
-
 / {
         conditional_layers {
             compatible = "zmk,conditional-layers";
-            tri_layer {
-                if-layers = <LOWER RAISE>;
-                then-layer = <TRI>;
-            };
-        };  
-
-        behaviors {
-                ht: hold_tap {
-                        label = "hold_tap";
-                        compatible = "zmk,behavior-hold-tap";
-                        #binding-cells = <2>;
-                        flavor = "tap-preferred";
-                        tapping-term-ms = <220>;
-                        quick-tap-ms = <150>;
-                        global-quick-tap;
-                        bindings = <&kp>, <&kp>;
-                };
-                
-                mdel: mod_del {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&gresc>, <&kp RET>;
-                        mods = <(MOD_LALT)>;
-                };
-                gresc: grave_escape {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&kp BSPC>, <&kp DEL>;
-                        mods = <(MOD_LGUI)>;
-                };
-        };
+~            tri_layer {
+~                if-layers = <LOWER RAISE>;
+~                then-layer = <TRI>;
+~            };
+~        };  
+~
+~        behaviors {
+~                ht: hold_tap {
+~                        label = "hold_tap";
+~                        compatible = "zmk,behavior-hold-tap";
+~                        #binding-cells = <2>;
+~                        flavor = "tap-preferred";
+~                        tapping-term-ms = <220>;
+~                        quick-tap-ms = <150>;
+~                        global-quick-tap;
+~                        bindings = <&kp>, <&kp>;
+~                };
+~                
+~                gresc: grave_escape {
+~                        compatible = "zmk,behavior-mod-morph";
+~                        #binding-cells = <0>;
+~                        bindings = <&kp BSPC>, <&kp DEL>;
+~                        mods = <(MOD_LALT|MOD_LCTL)>;
+~                };
+~                td0: tap_dance_0 {
+~                        compatible = "zmk,behavior-tap-dance";
+~                        #binding-cells = <0>;
+~                        tapping-term-ms = <200>;
+~                        bindings = <&gresc>, <&kp RET>;
+~                };
+~        };
+~        
         
 
 
