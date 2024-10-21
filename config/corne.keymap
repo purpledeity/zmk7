@@ -8,7 +8,8 @@
 #define HRML(k2,k3,k4) &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 #define HRMR(k1,k2,k3) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
 #define BASE 0
 #define LOWER 1
@@ -27,6 +28,12 @@
 &mmv {
     acceleration-exponent = <1>;      // 1
     time-to-max-speed-ms = <500>;     // 300
+    delay-ms = <0>;                   // 0
+};
+
+&msc {
+    acceleration-exponent = <1>;      // 0
+    time-to-max-speed-ms = <40>;      // 300
     delay-ms = <0>;                   // 0
 };
 
@@ -51,17 +58,17 @@
                         bindings = <&kp>, <&kp>;
                 };
                 
+                mdel: mod_del {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&gresc>, <&kp RET>;
+                        mods = <(MOD_LALT)>;
+                };
                 gresc: grave_escape {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp BSPC>, <&kp DEL>;
                         mods = <(MOD_LALT|MOD_LCTL)>;
-                };
-                td0: tap_dance_0 {
-                        compatible = "zmk,behavior-tap-dance";
-                        #binding-cells = <0>;
-                        tapping-term-ms = <200>;
-                        bindings = <&gresc>, <&kp RET>;
                 };
         };
         
@@ -102,7 +109,7 @@
                      &kp TILDE  &kp G      &kp X      &kp C      &kp V      &kp Z              &kp B      &kp M      &kp P      &kp COMMA  &kp DOT    &kp SQT
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |  GUI     |  LWR     |  SPC     |       |  ENT     |  RSE     |  ALT     |
-                                                      &mo 7      &mo 1    &mt LSHFT SPACE      &td0       &mo 2      &kp RALT
+                                                      &mo 7      &mo 1    &mt LSHFT SPACE      &mdel      &mo 2      &kp RALT
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
