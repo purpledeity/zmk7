@@ -21,7 +21,19 @@
     tapping-term-ms = <400>;
     require-prior-idle-ms = <500>;
 };   
-
+/omit-if-no-ref/ fmmv: fast_mouse_move {
+            compatible = "zmk,behavior-input-two-axis";
+            #binding-cells = <1>;
+            x-input-code = <INPUT_REL_X>;
+            y-input-code = <INPUT_REL_Y>;
+            time-to-max-speed-ms = <200>;
+            acceleration-exponent = <1>;
+        };
+        fmmv_input_listener {
+            compatible = "zmk,input-listener";
+            scale-multiplier = <6>;
+            device = <&fmmv>;
+        };
 / {
         conditional_layers {
             compatible = "zmk,conditional-layers";
@@ -56,6 +68,7 @@
                         bindings = <&gresc>, <&kp RET>;
                 };
         };
+        
 
 
 
