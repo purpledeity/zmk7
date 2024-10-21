@@ -21,8 +21,8 @@
 #define MOUSE 7
 
 &mt {
-    tapping-term-ms = <575>;
-    require-prior-idle-ms = <200>;
+    tapping-term-ms = <800>;
+    require-prior-idle-ms = <100>;
 };   
 
 &mmv {
