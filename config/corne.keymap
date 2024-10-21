@@ -33,38 +33,38 @@
 / {
         conditional_layers {
             compatible = "zmk,conditional-layers";
-~            tri_layer {
-~                if-layers = <LOWER RAISE>;
-~                then-layer = <TRI>;
-~            };
-~        };  
-~
-~        behaviors {
-~                ht: hold_tap {
-~                        label = "hold_tap";
-~                        compatible = "zmk,behavior-hold-tap";
-~                        #binding-cells = <2>;
-~                        flavor = "tap-preferred";
-~                        tapping-term-ms = <220>;
-~                        quick-tap-ms = <150>;
-~                        global-quick-tap;
-~                        bindings = <&kp>, <&kp>;
-~                };
-~                
-~                gresc: grave_escape {
-~                        compatible = "zmk,behavior-mod-morph";
-~                        #binding-cells = <0>;
-~                        bindings = <&kp BSPC>, <&kp DEL>;
-~                        mods = <(MOD_LALT|MOD_LCTL)>;
-~                };
-~                td0: tap_dance_0 {
-~                        compatible = "zmk,behavior-tap-dance";
-~                        #binding-cells = <0>;
-~                        tapping-term-ms = <200>;
-~                        bindings = <&gresc>, <&kp RET>;
-~                };
-~        };
-~        
+            tri_layer {
+                if-layers = <LOWER RAISE>;
+                then-layer = <TRI>;
+            };
+        };  
+
+        behaviors {
+                ht: hold_tap {
+                        label = "hold_tap";
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        flavor = "tap-preferred";
+                        tapping-term-ms = <220>;
+                        quick-tap-ms = <150>;
+                        global-quick-tap;
+                        bindings = <&kp>, <&kp>;
+                };
+                
+                gresc: grave_escape {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp BSPC>, <&kp DEL>;
+                        mods = <(MOD_LALT|MOD_LCTL)>;
+                };
+                td0: tap_dance_0 {
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&gresc>, <&kp RET>;
+                };
+        };
+        
         
 
 
