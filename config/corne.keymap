@@ -9,7 +9,7 @@
 #define HRMR(k1,k2,k3) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 1    // 10
 
 #define BASE 0
 #define LOWER 1
@@ -22,7 +22,7 @@
 
 &mt {
     tapping-term-ms = <10000>;
-    require-prior-idle-ms = <100>;
+    require-prior-idle-ms = <10000>;
 };   
 
 &mmv {
