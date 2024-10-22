@@ -21,8 +21,6 @@
 #define MOUSE 7
 
 &mt {
-    tapping-term-ms = <10000>;
-    require-prior-idle-ms = <10000>;
 };   
 
 &mmv {
@@ -47,6 +45,15 @@
         };  
 
         behaviors {
+                pht: positional_hold_tap {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        flavor = "hold-preferred";
+                        tapping-term-ms = <400>;
+                        quick-tap-ms = <200>;
+                        bindings = <&kp>, <&kp>;
+                        hold-trigger-key-positions = <1>;
+                };     
                 ht: hold_tap {
                         label = "hold_tap";
                         compatible = "zmk,behavior-hold-tap";
@@ -109,7 +116,7 @@
                      &kp TILDE  &kp G      &kp X      &kp C      &kp V      &kp Z              &kp B      &kp M      &kp P      &kp COMMA  &kp DOT    &kp SQT
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |  GUI     |  LWR     |  SPC     |       |  ENT     |  RSE     |  ALT     |
-                                                      &mo 7      &mo 1    &mt LSHFT SPACE      &mdel      &mo 2      &kp RALT
+                                                      &mo 7      &mo 1    &pht LSHFT SPACE      &mdel      &mo 2      &kp RALT
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
