@@ -53,7 +53,7 @@
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
                         flavor = "balanced";
-                        tapping-term-ms = <175>;
+                        tapping-term-ms = <220>;
                         quick-tap-ms =  <150>;
                         bindings = <&kp>, <&kp>;
                         hold-trigger-key-positions = <1>;
