@@ -35,6 +35,10 @@
     delay-ms = <0>;                   // 0
 };
 
+&key_repeat {
+    usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>;
+};
+
 / {
         conditional_layers {
             compatible = "zmk,conditional-layers";
@@ -50,7 +54,8 @@
                         #binding-cells = <2>;
                         flavor = "hold-preferred";
                         tapping-term-ms = <400>;
-                        quick-tap-ms = <200>;
+                        quick-tap-ms = <100>;
+                        retro-tap;
                         bindings = <&kp>, <&kp>;
                         hold-trigger-key-positions = <1>;
                 };     
@@ -106,14 +111,14 @@
                 default_layer {
                          bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                // |  TAB     |  Q       |  W       |  D       |  F       |  /       |       |  J       |  U       |  K       |  Y       |  :       |  ESC     |
-                     &kp TAB    &kp Q      &kp W      &kp D      &kp F      &kp FSLH           &kp J      &kp U      &kp K      &kp Y      &kp SEMI   &kp ESC
+                // |  TAB     |  Q       |  W       |  D       |  F       |  /       |       |  J       |  U       |  K       |  Y       |  :       |   APP    |
+                     &kp TAB    &kp Q      &kp W      &kp D      &kp F      &kp FSLH           &kp J      &kp U      &kp K      &kp Y      &kp SEMI   &kp K_APP
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  CTRL    |  A       |  S       |  E       |  T       |  L       |       |  H       |  N       |  R       |  I       |  O       |  BSPC    |
-                     &kp LSHFT  &kp A      HRML(S,    E,         T)         &kp L              &kp H      HRML(N,    R,         I)         &kp O      &kp BSPC
+                // |  CTRL    |  A       |  S       |  E       |  T       |  L       |       |  H       |  N       |  R       |  I       |  O       |  repeat  |
+                     &kp ESC  &kp A      HRML(S,    E,         T)         &kp L              &kp H      HRML(N,    R,         I)         &kp O        &key_repeat
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  ~       |  G       |  X       |  C       |  V       |  Z       |       |  B       |  M       |  p       |  ,       |  .       |  ~       |
-                     &kp TILDE  &kp G      &kp X      &kp C      &kp V      &kp Z              &kp B      &kp M      &kp P      &kp COMMA  &kp DOT    &kp SQT
+                // |  insert  |  G       |  X       |  C       |  V       |  Z       |       |  B       |  M       |  p       |  ,       |  .       |  ~       |
+                     &kp INS    &kp G      &kp X      &kp C      &kp V      &kp Z              &kp B      &kp M      &kp P      &kp COMMA  &kp DOT    &kp SQT
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |  GUI     |  LWR     |  SPC     |       |  ENT     |  RSE     |  ALT     |
                                                       &mo 7      &mo 1    &pht LSHFT SPACE      &mdel      &mo 2      &kp RALT
@@ -128,11 +133,11 @@
                 // |          |  1       |  2       |  3       |  4       |  5       |       |  6       |  7       |  8       |  9       |  0       |          |
                       &trans    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5             &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |          |          |          |  HOME    |  PGUP    |  PRSQ    |       |          |  left    |  right   |  DWN     |  UP      |  delete  |
-                      &trans    &trans     &trans     &kp HOME   &kp PG_UP  &kp PSCRN          &trans     &kp LEFT   &kp RIGHT  &kp DOWN   &kp UP     &kp DEL
+                // |          |          |          |  HOME    |  PGUP    |  PRSQ    |       |          |  left    |  right   |  DWN     |  UP      |          |
+                      &trans    &trans     &trans     &kp HOME   &kp PG_UP  &kp PSCRN          &trans     &kp LEFT   &kp RIGHT  &kp DOWN   &kp UP     &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |  CLCK    |  END     |  PGDN    |  SLCK    |       |          |          |          |          |          |          |
-                      &trans    &trans     &kp CLCK   &kp END    &kp PG_DN  &kp SLCK           &trans     &trans     &trans     &trans    &trans     &trans
+                      &trans    &trans     &kp CLCK   &kp END    &kp PG_DN  &kp SLCK           &trans     &trans     &trans     &trans     &trans     &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |          |          |          |       |  Enter   |          |          |
                                                       &trans     &trans     &trans           &kp KP_ENTER &trans     &trans
@@ -148,7 +153,7 @@
                       &trans    &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT          &kp CARET  &kp AMPS   &kp STAR   &kp MINUS  &kp PLUS   &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |  "|"     |  (       | {        |  [       |       |  ]       |  }       |  )       |  _       |  =       |          |
-                      &trans    &kp GRAVE  &kp PIPE   &kp LPAR  &kp LBRC   &kp LBKT            &kp RBKT   &kp RBRC   &kp RPAR   &kp UNDER  &kp EQUAL  &kp NUBS
+                      &trans    &kp BSLH  &kp PIPE   &kp LPAR  &kp LBRC   &kp LBKT            &kp RBKT   &kp RBRC   &kp RPAR   &kp UNDER  &kp EQUAL  &kp NUBS
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |          |          |          |          |       |          |          |          |          |          |          |
                       &trans    &trans     &trans     &trans     &trans     &trans             &trans     &trans     &trans     &trans     &trans     &trans
