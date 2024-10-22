@@ -52,9 +52,9 @@
                 pht: positional_hold_tap {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
-                        flavor = "tap-preferred";
+                        flavor = "hold-preferred";
                         tapping-term-ms = <400>;
-                        quick-tap-ms = <100>;
+                        quick-tap-ms = <75>;
                         bindings = <&kp>, <&kp>;
                         hold-trigger-key-positions = <1>;
                 };     
