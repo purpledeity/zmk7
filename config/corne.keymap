@@ -49,6 +49,21 @@
         };  
 
         behaviors {
+                fmmv: fast_mouse_move {
+			compatible = "zmk,behavior-input-two-axis";
+			#binding-cells = <1>;
+			x-input-code = <INPUT_REL_X>;
+			y-input-code = <INPUT_REL_Y>;
+			time-to-max-speed-ms = <200>;
+			acceleration-exponent = <1>;
+		};
+
+		fmmv_input_listener {
+			compatible = "zmk,input-listener";
+			scale-multiplier = <4>;
+			device = <&fmmv>;
+		};
+                
                 pht: positional_hold_tap {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
