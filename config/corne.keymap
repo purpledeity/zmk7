@@ -259,7 +259,7 @@
                       &trans     &trans     &trans     &trans     &trans     &trans             &msc MOVE_DOWN &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_DOWN &mmv MOVE_UP &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |          |          |          |          |       |          |          |          |          |          |          |
-                      &trans     &trans     &trans     &trans     &trans     &trans             &trans     &trans     &trans     &trans     &trans     &trans
+                      &trans     &trans     &trans     &trans     &trans     &trans             &trans     &trans     &trans     &fmmv MOVE_DOWN     &trans     &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |          |          |          |       |          |          |          |
                                                        &trans     &trans     &trans            &mkp LCLK  &mkp RCLK   &trans
