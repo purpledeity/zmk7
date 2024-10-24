@@ -82,7 +82,7 @@
 		mmv3_input_listener {
 			compatible = "zmk,input-listener";
 			scale-multiplier = <4>;
-			device = <&mmv2>;
+			device = <&mmv3>;
 		};
                 
                 pht: positional_hold_tap {
