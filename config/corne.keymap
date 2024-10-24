@@ -32,8 +32,8 @@
 };
 &mmv_input_listener {
 	compatible = "zmk,input-listener";
-	scale-multiplier = <1>;
-	device = <&mmv2>;
+	scale-multiplier = <2>;
+	device = <&mmv>;
 };
 
 &msc {
