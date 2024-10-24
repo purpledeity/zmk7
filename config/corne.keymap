@@ -67,7 +67,7 @@
 
 		mmv2_input_listener {
 			compatible = "zmk,input-listener";
-			scale-multiplier = <2>;
+			scale-multiplier = <4>;
 			device = <&mmv2>;
 		};
                 mmv3: fast_mouse_move {
@@ -81,7 +81,7 @@
 
 		mmv3_input_listener {
 			compatible = "zmk,input-listener";
-			scale-multiplier = <4>;
+			scale-multiplier = <6>;
 			device = <&mmv3>;
 		};
                 
