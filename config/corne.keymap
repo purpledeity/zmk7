@@ -221,17 +221,17 @@
                         bindings = <
                 // qwerty layer for gaming; exit by TAB + sql
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                // |          |  Q       |  W       |  D       |  F       |  K       |       |  J       |  U       |  R       |  L       |  ;       |          |
-                     &trans     &kp Q      &kp W      &kp E      &kp R      &kp T              &kp Y      &kp U      &kp I      &kp O      &kp P      &trans
+                // |  tab     |  Q       |  W       |  D       |  F       |  K       |       |  J       |  U       |  R       |  L       |  ;       |          |
+                     &kp TAB    &kp Q      &kp W      &kp E      &kp R      &kp T              &kp Y      &kp U      &kp I      &kp O      &kp P      &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  CTRL    |  A       |  S       |  E       |  T       |  G       |       |  Y       |  N       |  I       |  O       |  H       |          |
-                     &trans     &kp A      &kp S      &kp D      &kp F      &kp G              &kp H     &kp J       &kp K      &kp L      &kp SEMI   &trans
+                // |  Shift   |  A       |  S       |  E       |  T       |  G       |       |  Y       |  N       |  I       |  O       |  H       |          |
+                     &kp LSHIFT &kp A      &kp S      &kp D      &kp F      &kp G              &kp H      &kp J      &kp K      &kp L      &kp SEMI   &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |  SHFT    |  Z       |  X       |  C       |  V       |  B       |       |  P       |  M       |  ,       |  .       |  /       |          |
                      &trans     &kp Z      &kp X      &kp C      &kp V      &kp B              &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
-                //                                  |  GUI     |  ESC     |  SPC     |       |  ENT     |  RSE     |  ALT     |
-                                                      &trans     &kp ESC    &trans             &trans     &trans     &trans
+                //                                  |  M       |  ESC     |  SPC     |       |  ENT     |  RSE     |  ALT     |
+                                                      &kp M     &kp ESC    &kp SPACE           &kp RET    &mo 2      &kp LALT
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 }; 
