@@ -20,7 +20,6 @@
 #define BRUSH 6
 #define SONE 7
 #define STWO 8
-#define SFOUR 9
 
 &mt {
 };   
@@ -69,20 +68,6 @@
 			compatible = "zmk,input-listener";
 			scale-multiplier = <10>;
 			device = <&mmv2>;
-		};
-                mmv3: fast_mouse_move {
-			compatible = "zmk,behavior-input-two-axis";
-			#binding-cells = <1>;
-			x-input-code = <INPUT_REL_X>;
-			y-input-code = <INPUT_REL_Y>;
-			time-to-max-speed-ms = <200>;
-			acceleration-exponent = <1>;
-		};
-
-		mmv3_input_listener {
-			compatible = "zmk,input-listener";
-			scale-multiplier = <20>;
-			device = <&mmv3>;
 		};
                 
                 pht: positional_hold_tap {
@@ -274,7 +259,7 @@
                         bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 // |          |          |          |          |          |          |       |          |          |          |          |          |          |
-                      &trans     &trans     &mo 8      &mo 9      &trans     &trans             &trans     &trans     &trans     &trans     &trans      &trans
+                      &trans     &trans     &mo 8      &trnas      &trans     &trans             &trans     &trans     &trans     &trans     &trans      &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |          |          |          |          |       |          |          |          |          |          |          |
                       &trans     &trans     &trans     &trans     &trans     &trans             &trans     &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_DOWN &mmv MOVE_UP &trans
@@ -305,21 +290,5 @@
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
         };
-        sfour_layer {
-                        bindings = <
-                // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                // |          |          |          |          |          |          |       |          |          |          |          |          |          |
-                      &trans     &trans     &trans     &trans     &trans     &trans             &trans     &trans     &trans     &trans     &trans      &trans
-                // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |          |          |          |          |          |          |       |          |          |          |          |          |          |
-                      &trans     &trans     &trans     &trans     &trans     &trans             &trans     &mmv3 MOVE_LEFT &mmv3 MOVE_RIGHT &mmv3 MOVE_DOWN &mmv3 MOVE_UP &trans
-                // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |          |          |          |          |          |          |       |          |          |          |          |          |          |
-                      &trans     &trans     &trans     &trans     &trans     &trans             &trans     &trans     &trans     &trans     &trans     &trans
-                // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
-                //                                  |          |          |          |       |          |          |          |
-                                                       &trans     &trans     &trans            &mkp LCLK  &mkp RCLK   &trans
-                //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
-                        >;
-        };        
+    
 };
