@@ -8,7 +8,7 @@
 #define HRML(k2,k3,k4) &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 #define HRMR(k1,k2,k3) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 600  // 600
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 1    // 10
 
 #define BASE 0
@@ -18,8 +18,7 @@
 #define GAME 4
 #define NUMB 5
 #define BRUSH 6
-#define SONE 7
-#define STWO 8
+#define MOUSE 7
 
 &mt {
 };   
@@ -28,11 +27,6 @@
     acceleration-exponent = <1>;      // 1
     time-to-max-speed-ms = <500>;     // 300
     delay-ms = <0>;                   // 0
-};
-&mmv_input_listener {
-	compatible = "zmk,input-listener";
-	scale-multiplier = <2>;
-	device = <&mmv>;
 };
 
 &msc {
@@ -55,27 +49,12 @@
         };  
 
         behaviors {
-                mmv2: normal_mouse_move {
-			compatible = "zmk,behavior-input-two-axis";
-			#binding-cells = <1>;
-			x-input-code = <INPUT_REL_X>;
-			y-input-code = <INPUT_REL_Y>;
-			time-to-max-speed-ms = <200>;
-			acceleration-exponent = <1>;
-		};
-
-		mmv2_input_listener {
-			compatible = "zmk,input-listener";
-			scale-multiplier = <10>;
-			device = <&mmv2>;
-		};
-                
                 pht: positional_hold_tap {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
-                        flavor = "balanced";
-                        tapping-term-ms = <220>;
-                        quick-tap-ms =  <150>;
+                        flavor = "tap-preferred";
+                        tapping-term-ms = <400>;
+                        quick-tap-ms = <200>;
                         bindings = <&kp>, <&kp>;
                         hold-trigger-key-positions = <1>;
                 };     
@@ -206,17 +185,17 @@
                         bindings = <
                 // qwerty layer for gaming; exit by TAB + sql
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                // |  tab     |  Q       |  W       |  D       |  F       |  K       |       |  J       |  U       |  R       |  L       |  ;       |          |
-                     &kp TAB    &kp Q      &kp W      &kp E      &kp R      &kp T              &kp Y      &kp U      &kp I      &kp O      &kp P      &trans
+                // |          |  Q       |  W       |  D       |  F       |  K       |       |  J       |  U       |  R       |  L       |  ;       |          |
+                     &trans     &kp Q      &kp W      &kp E      &kp R      &kp T              &kp Y      &kp U      &kp I      &kp O      &kp P      &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  Shift   |  A       |  S       |  E       |  T       |  G       |       |  Y       |  N       |  I       |  O       |  H       |          |
-                     &kp LSHIFT &kp A      &kp S      &kp D      &kp F      &kp G              &kp H      &kp J      &kp K      &kp L      &kp SEMI   &trans
+                // |  CTRL    |  A       |  S       |  E       |  T       |  G       |       |  Y       |  N       |  I       |  O       |  H       |          |
+                     &trans     &kp A      &kp S      &kp D      &kp F      &kp G              &kp H     &kp J       &kp K      &kp L      &kp SEMI   &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |  SHFT    |  Z       |  X       |  C       |  V       |  B       |       |  P       |  M       |  ,       |  .       |  /       |          |
                      &trans     &kp Z      &kp X      &kp C      &kp V      &kp B              &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
-                //                                  |  M       |  ESC     |  SPC     |       |  ENT     |  RSE     |  ALT     |
-                                                      &kp M     &kp ESC    &kp SPACE           &kp RET    &mo 2      &kp LALT
+                //                                  |  GUI     |  ESC     |  SPC     |       |  ENT     |  RSE     |  ALT     |
+                                                      &trans     &kp ESC    &trans             &trans     &trans     &trans
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 }; 
@@ -255,32 +234,14 @@
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
-        sone_layer {
+        mouse_layer {
                         bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 // |          |          |          |          |          |          |       |          |          |          |          |          |          |
-                      &trans     &trans     &mo 8      &trnas      &trans     &trans             &trans     &trans     &trans     &trans     &trans      &trans
+                      &trans     &trans     &trans     &trans     &trans     &trans             &msc MOVE_UP &msc MOVE_LEFT &msc MOVE_RIGHT &trans &trans &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |          |          |          |          |       |          |          |          |          |          |          |
-                      &trans     &trans     &trans     &trans     &trans     &trans             &trans     &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_DOWN &mmv MOVE_UP &trans
-                // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |          |          |          |          |          |          |       |          |          |          |          |          |          |
-                      &trans     &trans     &trans     &trans     &trans     &trans             &trans     &trans     &trans     &trans     &trans     &trans
-                // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
-                //                                  |          |          |          |       |          |          |          |
-                                                       &trans     &trans     &trans             &mkp LCLK  &mkp RCLK  &trans
-                //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
-                        >;
-                };
-        };
-        stwo_layer {
-                        bindings = <
-                // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                // |          |          |          |          |          |          |       |          |          |          |          |          |          |
-                      &trans     &trans     &trans     &trans     &trans     &trans             &trans     &trans     &trans     &trans     &trans      &trans
-                // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |          |          |          |          |          |          |       |          |          |          |          |          |          |
-                      &trans     &trans     &trans     &trans     &trans     &trans             &trans     &mmv2 MOVE_LEFT &mmv2 MOVE_RIGHT &mmv2 MOVE_DOWN &mmv2 MOVE_UP &trans
+                      &trans     &trans     &trans     &trans     &trans     &trans             &msc MOVE_DOWN &mmv MOVE_LEFT &mmv MOVE_RIGHT &mmv MOVE_DOWN &mmv MOVE_UP &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |          |          |          |          |       |          |          |          |          |          |          |
                       &trans     &trans     &trans     &trans     &trans     &trans             &trans     &trans     &trans     &trans     &trans     &trans
@@ -289,6 +250,6 @@
                                                        &trans     &trans     &trans            &mkp LCLK  &mkp RCLK   &trans
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
+                };
         };
-    
 };
