@@ -73,7 +73,7 @@
                 pht: positional_hold_tap {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
-                        flavor = "balanced";
+                        flavor = "hold-preferred";
                         tapping-term-ms = <220>;
                         quick-tap-ms =  <150>;
                         bindings = <&kp>, <&kp>;
@@ -93,6 +93,7 @@
                 mdel: mod_del {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
+                        flavor = "balanced"
                         bindings = <&gresc>, <&kp RET>;
                         mods = <(MOD_LALT)>;
                 };
@@ -100,7 +101,7 @@
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp BSPC>, <&kp DEL>;
-                        mods = <(MOD_LALT|MOD_LCTL)>;
+                        mods = <(MOD_LALT|MOD_RCTL)>;
                 };
         };
         
