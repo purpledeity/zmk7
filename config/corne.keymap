@@ -93,7 +93,6 @@
                 mdel: mod_del {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        flavor = "balanced"
                         bindings = <&gresc>, <&kp RET>;
                         mods = <(MOD_LALT)>;
                 };
