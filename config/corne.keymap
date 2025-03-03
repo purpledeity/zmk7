@@ -60,17 +60,17 @@
                         bindings = <&kp>, <&kp>;
                 };
                 
-                mdel: mod_del {
+                backspace_enter: mod_del {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&gresc>, <&kp RET>;
+                        bindings = <&kp BSPC>, <&kp RET>;
                         mods = <(MOD_LALT)>;
                 };
-                gresc: grave_escape {
+                space_delete: grave_escape {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp BSPC>, <&kp DEL>;
-                        mods = <(MOD_LALT|MOD_RCTL)>;
+                        bindings = <&kp SPACE>, <&kp DEL>;
+                        mods = <(MOD_LALT)>;
                 };
         };
         
@@ -105,13 +105,13 @@
                      &kp TAB    &kp Q      &kp W      &kp D      &kp F      &kp FSLH           &kp J      &kp U      &kp K      &kp Y      &kp SEMI   &kp K_APP
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |  CTRL    |  A       |  S       |  E       |  T       |  L       |       |  H       |  N       |  R       |  I       |  O       |  repeat  |
-                     &kp ESC  &kp A      HRML(S,    E,         T)         &kp L              &kp H      HRML(N,    R,         I)         &kp O        &kp LSHFT
+                     &kp ESC  &kp A      HRML(S,    E,         T)         &kp L                &kp H    HRML(N,    R,         I)         &kp O        &kp LSHFT
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |  insert  |  G       |  X       |  C       |  V       |  Z       |       |  B       |  M       |  p       |  ,       |  .       |  ~       |
                      &kp INS    &kp G      &kp X      &kp C      &kp V      &kp Z              &kp B      &kp M      &kp P      &kp COMMA  &kp DOT    &kp SQT
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |  GUI     |  LWR     |  SPC     |       |  ENT     |  RSE     |  ALT     |
-                                                      &mo 7      &mo 1    &kp SPACE            &mdel      &mo 2      &kp RALT
+                                                      &mo 7      &mo 1    &space_delete      &backspace_enter &mo 2  &kp RALT
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
