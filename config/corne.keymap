@@ -60,13 +60,13 @@
                         bindings = <&kp>, <&kp>;
                 };
                 
-                backspace_enter: mod_del {
+                backspace_enter: BSCP {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp BSPC>, <&kp RET>;
                         mods = <(MOD_LALT)>;
                 };
-                space_delete: grave_escape {
+                space_delete: SPACE {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp SPACE>, <&kp DEL>;
