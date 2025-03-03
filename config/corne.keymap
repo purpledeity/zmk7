@@ -79,7 +79,7 @@
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp BSPC>, <&kp DEL>;
-                        mods = <(MOD_LALT|MOD_LCTL)>;
+                        mods = <(MOD_LALT|MOD_RCTL)>;
                 };
         };
         
@@ -120,7 +120,7 @@
                      &kp INS    &kp G      &kp X      &kp C      &kp V      &kp Z              &kp B      &kp M      &kp P      &kp COMMA  &kp DOT    &kp SQT
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |  GUI     |  LWR     |  SPC     |       |  ENT     |  RSE     |  ALT     |
-                                                      &mo 7      &mo 1    &pht LSHFT SPACE      &mdel      &mo 2      &kp RALT
+                                                      &mo 7      &mo 1    &ht LSHFT SPACE      &mdel      &mo 2      &kp RALT
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
