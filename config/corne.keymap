@@ -94,7 +94,7 @@
                 };
 
                 shift_combo {
-                        timeout-ms = <25>;
+                        timeout-ms = <0>;
                         key-positions = <38 39>;
                         bindings = <&kp LSHFT>;
                 };
