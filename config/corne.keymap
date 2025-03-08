@@ -92,6 +92,12 @@
                         key-positions = <17 38>;
                         bindings = <&mo NUMB>;
                 };
+
+                shift_combo {
+                        timeout-ms = <25>;
+                        key-positions = <39 40>;
+                        bindings = <&kp LSHFT>;
+                };
         };
         
 
@@ -101,17 +107,17 @@
                 default_layer {
                          bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                // |  TAB     |  Q       |  W       |  D       |  F       |  /       |       |  J       |  U       |  K       |  Y       |  :       |   APP    |
-                     &kp TAB    &kp Q      &kp W      &kp D      &kp F      &kp FSLH           &kp J      &kp U      &kp K      &kp Y      &kp SEMI   &kp K_APP
+                // |          |  Q       |  W       |  D       |  F       |  /       |       |  J       |  U       |  K       |  Y       |  :       |          |
+                     &trans     &kp Q      &kp W      &kp D      &kp F      &kp FSLH           &kp J      &kp U      &kp K      &kp Y      &kp SEMI   &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  CTRL    |  A       |  S       |  E       |  T       |  L       |       |  H       |  N       |  R       |  I       |  O       |  repeat  |
-                     &kp ESC  &kp A      HRML(S,    E,         T)         &kp L                &kp H    HRML(N,    R,         I)         &kp O        &kp LSHFT
+                // |  CTRL    |  A       |  S       |  E       |  T       |  L       |       |  H       |  N       |  R       |  I       |  O       |  TAB     |
+                     &kp ESC  &kp A      HRML(S,    E,         T)         &kp L                &kp H    HRML(N,    R,         I)         &kp O        &kp TAB
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  insert  |  G       |  X       |  C       |  V       |  Z       |       |  B       |  M       |  p       |  ,       |  .       |  ~       |
-                     &kp INS    &kp G      &kp X      &kp C      &kp V      &kp Z              &kp B      &kp M      &kp P      &kp COMMA  &kp DOT    &kp SQT
+                // |          |  G       |  X       |  C       |  V       |  Z       |       |  B       |  M       |  p       |  ,       |  .       |  "       |
+                     &trans    &kp G      &kp X      &kp C      &kp V      &kp Z               &kp B      &kp M      &kp P      &kp COMMA  &kp DOT    &kp SQT
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
-                //                                  |  GUI     |  LWR     |  SPC     |       |  ENT     |  RSE     |  ALT     |
-                                                      &mo 7      &mo 1    &spacedelete       &backspacenter &mo 2  &kp RALT
+                //                                  |  Mouse   |  LWR     |  SPC     |       |  ENT     |  RSE     |          |
+                                                      &mo 7      &mo 1    &spacedelete       &backspacenter &mo 2    &kp LSHIFT
                 //                                  ╰──────────┴──────────┴──────────╯       ╰──────────┴──────────┴──────────╯
                         >;
                 };
