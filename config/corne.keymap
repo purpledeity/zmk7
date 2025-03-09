@@ -68,20 +68,18 @@
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp BSPC>, <&kp RET>;
-                        mods = <(MOD_LALT)>;
+                        mods = <(MOD_LALT|MOD_RALT)>;
+                        keep-mods = <(MOD_RALT)>;
                 };
                 spacedelete: grave_escape {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp SPACE>, <&kp DEL>;
-                        mods = <(MOD_LALT)>;
+                        mods = <(MOD_LALT|MOD_RALT)>;
+                        keep-mods = <(MOD_RALT)>;
                 };
         };
         
-        
-
-
-
        combos {
             compatible = "zmk,combos";
                 combo_exit_game_layer {
@@ -116,7 +114,7 @@
                      &trans     &kp Q      &kp W      &kp D      &kp F      &kp FSLH           &kp J      &kp U      &kp K      &kp Y      &kp SEMI   &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |  CTRL    |  A       |  S       |  E       |  T       |  L       |       |  H       |  N       |  R       |  I       |  O       |  TAB     |
-                     &kp ESC  &kp A      HRML(S,    E,         T)         &kp L                &kp H    HRML(N,    R,         I)         &kp O        &kp TAB
+                     &kp ESC  &kp A      HRML(S,    E,         T)         &kp L                &kp H    HRMR(N,    R,         I)         &kp O        &kp TAB
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |  G       |  X       |  C       |  V       |  Z       |       |  B       |  M       |  p       |  ,       |  .       |  "       |
                      &trans    &kp G      &kp X      &kp C      &kp V      &kp Z               &kp B      &kp M      &kp P      &kp COMMA  &kp DOT    &kp SQT
