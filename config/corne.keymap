@@ -35,6 +35,10 @@
     delay-ms = <0>;                   // 0
 };
 
+&sk { 
+    quick-release; 
+};
+
 &key_repeat {
     usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>;
 };
