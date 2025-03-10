@@ -35,6 +35,10 @@
     quick-release; 
 };
 
+&sl { 
+quick-release;
+};
+
 / {
         conditional_layers {
             compatible = "zmk,conditional-layers";
@@ -93,7 +97,7 @@
                     timeout-ms = <50>;
                     slow-release;
                     key-positions = <37 39>;
-                    bindings = <&mo 6>;
+                    bindings = <&sl 6>;
                 };        
         };
 
