@@ -5,8 +5,8 @@
 #include <dt-bindings/zmk/mouse.h>
 
 // Home row mods macro
-#define HRML(k2,k3,k4,k5) &ht LSHFT k2 &ht LALT  k3  &ht LCTRL k4  &ht LGUI k5
-#define HRMR(k1,k2,k3,k4) &ht RGUI  k1 &ht RCTRL k2  &ht RALT  k3  &ht SHFT k4
+#define HRML(k2,k3,k4,k5) &ht LSHFT k2 &ht LALT  k3  &ht LCTRL k4  &ht LGUI  k5
+#define HRMR(k1,k2,k3,k4) &ht RGUI  k1 &ht RCTRL k2  &ht RALT  k3  &ht RSHFT k4
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 1    // 10
