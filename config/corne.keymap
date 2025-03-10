@@ -57,6 +57,7 @@ quick-release;
                     tapping-term-ms = <220>;
                     quick-tap-ms = <150>;
                     global-quick-tap;
+                    retro-tap;
                     bindings = <&kp>, <&kp>;
                 };
                 
@@ -64,16 +65,16 @@ quick-release;
                     compatible = "zmk,behavior-mod-morph";
                     #binding-cells = <0>;
                     bindings = <&kp BSPC>, <&kp RET>;
-                    mods = <(MOD_LSFT|MOD_RSFT)>;
-                    keep-mods = <(MOD_RSFT)>;
+                    mods = <(MOD_LALT|MOD_RALT)>;
+                    keep-mods = <(MOD_RALT)>;
                 };
 
                 spacedelete: grave_escape {
                     compatible = "zmk,behavior-mod-morph";
                     #binding-cells = <0>;
                     bindings = <&kp SPACE>, <&kp DEL>;
-                    mods = <(MOD_LSFT|MOD_RSFT)>;
-                    keep-mods = <(MOD_RSFT)>;
+                    mods = <(MOD_LALT|MOD_RALT)>;
+                    keep-mods = <(MOD_RALRT)>;
                 };
         };
         
