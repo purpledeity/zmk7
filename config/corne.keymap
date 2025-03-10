@@ -56,11 +56,10 @@ quick-release;
                     flavor = "tap-preferred";
                     tapping-term-ms = <220>;
                     quick-tap-ms = <150>;
-                    global-quick-tap;
                     retro-tap;
                     bindings = <&kp>, <&kp>;
                 };
-                
+
                 backspacenter: mod_del {
                     compatible = "zmk,behavior-mod-morph";
                     #binding-cells = <0>;
@@ -74,7 +73,7 @@ quick-release;
                     #binding-cells = <0>;
                     bindings = <&kp SPACE>, <&kp DEL>;
                     mods = <(MOD_LALT|MOD_RALT)>;
-                    keep-mods = <(MOD_RALRT)>;
+                    keep-mods = <(MOD_RALT)>;
                 };
         };
         
