@@ -76,7 +76,7 @@ quick-release;
                     keep-mods = <(MOD_RCTL)>;
                 };
         };
-        
+
        combos {
             compatible = "zmk,combos";
                 combo_exit_game_layer {
@@ -106,14 +106,14 @@ quick-release;
                 default_layer {
                          bindings = <
                 // ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                // |          |  Q       |  W       |  D       |  F       |  /       |       |  J       |  U       |  K       |  Y       |  :       |          |
-                     &trans     &kp Q      &kp W      &kp D      &kp F      &kp FSLH           &kp J      &kp U      &kp K      &kp Y      &kp SEMI   &trans
+                // |  TAB     |  Q       |  W       |  D       |  F       |  /       |       |  J       |  U       |  K       |  Y       |  :       |  TAB    |
+                     &kp TAB    &kp Q      &kp W      &kp D      &kp F      &kp FSLH           &kp J      &kp U      &kp K      &kp Y      &kp SEMI   &kp TAB
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                // |  CTRL    |  A       |  S       |  E       |  T       |  L       |       |  H       |  N       |  R       |  I       |  O       |  TAB     |
-                     &kp ESC  HRML(A,      S,         E,         T)         &kp L              &kp H    HRMR(N,      R,         I,         O)         &kp TAB
+                // |  ESC     |  A       |  S       |  E       |  T       |  L       |       |  H       |  N       |  R       |  I       |  O       |  ESC     |
+                     &kp ESC  HRML(A,      S,         E,         T)         &kp L              &kp H    HRMR(N,      R,         I,         O)         &kp ESC
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |  G       |  X       |  C       |  V       |  Z       |       |  B       |  M       |  p       |  ,       |  .       |  "       |
-                     &trans    &kp G      &kp X      &kp C      &kp V      &kp Z               &kp B      &kp M      &kp P      &kp COMMA  &kp DOT    &kp SQT
+                     &trans     &kp G      &kp X      &kp C      &kp V      &kp Z              &kp B      &kp M      &kp P      &kp COMMA  &kp DOT    &kp SQT
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |  Mouse   |  LWR     |  SPC     |       |  ENT     |  RSE     |          |
                                                       &mo 5     &mo 1    &spacedelete       &backspacenter &mo 2     &trans
