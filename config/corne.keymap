@@ -146,10 +146,10 @@ quick-release;
                       &trans    &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT          &kp CARET  &kp AMPS   &kp STAR   &kp MINUS  &kp PLUS   &trans
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |  "|"     |  (       | {        |  [       |       |  ]       |  }       |  )       |  _       |  =       |          |
-                      &trans    &kp BSLH  &kp PIPE   &kp LPAR  &kp LBRC   &kp LBKT            &kp RBKT   &kp RBRC   &kp RPAR   &kp UNDER  &kp EQUAL  &kp NUBS
+                      &kp GRACE &kp TILDE  &kp PIPE   &kp LPAR  &kp LBRC   &kp LBKT            &kp RBKT   &kp RBRC   &kp RPAR   &kp UNDER  &kp EQUAL  &kp NUBS
                 // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 // |          |          |          |          |          |          |       |          |          |          |          |          |          |
-                      &trans    &trans     &trans     &trans     &trans     &trans             &trans     &trans     &trans     &trans     &trans     &trans
+                      &trans    &trans     &trans     &trans     &trans     &kp BSLH           &trans     &trans     &trans     &trans     &trans     &trans
                 // ╰──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤       ├──────────┴──────────┴──────────┼──────────┼──────────┼──────────╯
                 //                                  |          |          |          |       |          |          |          |
                                                       &trans     &trans     &trans             &trans     &trans     &trans
